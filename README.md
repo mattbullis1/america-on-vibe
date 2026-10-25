@@ -1,6 +1,8 @@
 # America On Vibe (AOV)
 
-AOV is a browser-based tribute to the look and feel of 1990s online services. It provides channels, member accounts, chat rooms, buddy lists, instant messages, internal mail, and a small browser window. The official site is [americaonvibe.com](https://americaonvibe.com/). AOV is independent and is not affiliated with AOL.
+AOV is an independent, noncommercial nostalgia project inspired by the AOL experience of the late 1990s. Its desktop-style windows, channel menu, ribbon, buddy list, chat rooms, instant messages, internal mail, and dial-up sign-on are meant to bring back the feeling of exploring an early online service in a modern browser. The official site is [americaonvibe.com](https://americaonvibe.com/). AOV is not affiliated with or endorsed by AOL.
+
+The project owner designed and developed AOV with assistance from OpenAI Codex. Codex helped research options, write and revise code, create some project assets, and test changes; the owner directed the project and made the final design and release decisions.
 
 ## License and branding
 

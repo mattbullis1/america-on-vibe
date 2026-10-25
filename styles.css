@@ -507,3 +507,43 @@
 .channel-column .channel-art-button:active,.channels-search .channel-art-button:active{transform:translateY(1px);box-shadow:inset 0 0 0 1px #223755,inset 1px 2px 5px #061126}
 @media(max-width:800px){.channel-art-label{font-size:clamp(11px,2.35vw,18px)}.channel-art-button--personalfinance .channel-art-label,.channel-art-button--researchandlearn .channel-art-label,.channel-art-button--digital-cities .channel-art-label{font-size:clamp(10px,2vw,15px)}}
 @media(max-width:560px){.channel-column .channel-art-button,.channels-search .channel-art-button{min-height:29px;padding-left:7px;border-width:1px}.channel-art-label{font-size:clamp(10px,3vw,15px)}.channel-art-button--personalfinance .channel-art-label,.channel-art-button--researchandlearn .channel-art-label,.channel-art-button--digital-cities .channel-art-label{font-size:clamp(8px,2.4vw,12px)}}
+
+/* Compact 1990s Buddy List: the names own the window, tools live at its foot. */
+.desktop-window.buddy-window{left:auto;right:12px;top:12px;width:236px;height:min(540px,calc(100% - 24px));min-height:330px}
+.buddy-window .titlebar{min-height:25px;padding:2px 3px 2px 5px;background:linear-gradient(#a9b4b5,#71858c)}
+.buddy-window .titlebar strong{font-size:12px}
+.buddy-window .title-actions button{width:19px;height:18px;font-size:12px}
+.buddy-window .buddy-content{overflow:hidden;background:#e3e3df}
+.buddy-window .buddy-summary{gap:5px;min-height:34px;padding:3px 6px;background:#f3f3ec;border-bottom:1px solid #8d989b;font-size:11px}
+.buddy-window .avatar{width:23px;height:23px;flex:none;font-size:15px}
+.buddy-window .buddy-summary small{font-size:10px}
+.buddy-list-heading{padding:3px 6px;border-bottom:1px solid #8b9296;background:#f5f5ed;color:#17212a;font-size:12px;font-weight:700}
+.buddy-window #buddy-groups{flex:1;min-height:0;margin:3px 5px 0;overflow:auto;border:2px inset #b7b7b2;background:#fff}
+.buddy-window #buddy-groups .buddy-group{display:block;margin:0;padding:0;gap:0}
+.buddy-window #buddy-groups .buddy-group>strong{display:block;padding:3px 5px;background:#233878;color:#fff;font-size:11px;line-height:1.15}
+.buddy-member{border-bottom:1px solid #eef0f1;font-size:11px}
+.buddy-member summary{list-style:none;overflow:hidden;padding:2px 4px 2px 12px;color:#1d2830;cursor:pointer;text-overflow:ellipsis;white-space:nowrap}
+.buddy-member summary::-webkit-details-marker{display:none}
+.buddy-member.offline summary{color:#70777c}
+.buddy-member.selected summary,.buddy-member[open] summary{background:#dbe8ff;color:#112f6e}
+.buddy-member-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;padding:3px 4px 5px 12px;background:#f3f6fb}
+.buddy-member-actions button{padding:2px 1px;border:1px solid #9aa7b1;background:#e9edf0;color:#173a65;font-size:10px}
+.buddy-blocked-panel{flex:none;margin:2px 5px;border:1px solid #9ea9ae;background:#f4f4f1;font-size:11px}
+.buddy-blocked-panel summary{padding:3px 5px;cursor:pointer;font-weight:700}
+.buddy-blocked-panel #buddy-blocked{max-height:75px;overflow:auto;padding:2px 4px}
+.buddy-blocked-panel .buddy-row{padding:2px 0}
+.buddy-blocked-panel .buddy-row span{min-width:0}
+.buddy-tool-panel{flex:none;padding:5px;border-top:1px solid #9fa6a7;background:#eeeee9}
+.buddy-compact-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px;align-items:center}
+.buddy-compact-form label{grid-column:1/-1;font-size:11px;font-weight:700}
+.buddy-compact-form input,.buddy-compact-form select{min-width:0;width:100%;padding:3px;border:2px inset #b7b7b2;font-size:11px}
+.buddy-compact-form #away-message{grid-column:1/-1}
+.buddy-compact-form .classic-button{padding:3px 5px;font-size:10px}
+.buddy-toolbar{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;flex:none;padding:4px 3px 3px;border-top:1px solid #99a1a4;background:#d6d9d7}
+.buddy-toolbar button{display:grid;justify-items:center;gap:1px;min-width:0;padding:2px 0;border:1px solid #8f9ca3;background:linear-gradient(#f9faf5,#b9c6c8);box-shadow:inset 1px 1px #fff;color:#172e48;font-size:10px;line-height:1.1}
+.buddy-toolbar button span{font-size:17px;color:#126279}
+.buddy-toolbar button[aria-expanded=true]{background:#b6cee3;box-shadow:inset 1px 1px #697b83}
+.buddy-toolbar button:disabled{opacity:.55}
+.buddy-window .statusbar{flex:none;overflow:hidden;margin:0;padding:3px 5px;font-size:9px;text-overflow:ellipsis;white-space:nowrap}
+@media(min-width:601px) and (max-width:800px){.desktop-window.buddy-window,.desktop-window.buddy-window.maximized{position:absolute!important;left:auto!important;right:8px!important;top:8px!important;width:236px!important;height:min(540px,calc(100% - 16px))!important;min-height:330px!important;box-shadow:inset -1px -1px #404040,inset 1px 1px #fff,1px 1px 0 #161616,4px 6px 20px #10233a66}}
+@media(max-width:600px){.desktop-window.buddy-window{width:100%!important;height:100%!important;min-height:0;right:auto;top:auto}.buddy-window #buddy-groups{margin:4px 8px 0}.buddy-window .buddy-member summary{padding:6px 9px 6px 16px;font-size:13px}}

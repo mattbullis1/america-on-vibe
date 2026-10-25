@@ -58,6 +58,7 @@
   let chatLastId = 0;
   let chatBusy = false;
   let chatState = { userId: 0, buddies: [], blockedIds: [], online: [] };
+  let selectedBuddyName = '';
   let imContact = '';
   const imConversations = new Map();
   const imSeen = new Set();
@@ -180,6 +181,8 @@
 
   function renderBuddyList() {
     const onlineNames = new Set(chatState.online.map(person => Number(person.id)));
+    if (!chatState.buddies.some(person => person.username === selectedBuddyName)) selectedBuddyName = '';
+    $('#buddy-im').disabled = !selectedBuddyName;
     const groups = new Map();
     for (const person of chatState.buddies) {
       const group = person.group_name || 'Buddies';
@@ -187,24 +190,34 @@
       groups.get(group).push(person);
     }
     const root = $('#buddy-groups'); root.replaceChildren();
-    if (!groups.size) root.textContent = 'No buddies yet. Add a screen name above.';
+    if (!groups.size) root.textContent = 'No buddies yet. Use Add below.';
     for (const [group, people] of groups) {
       const section = document.createElement('div'); section.className = 'buddy-group';
-      const heading = document.createElement('strong'); heading.textContent = `${group} (${people.length})`; section.append(heading);
-      for (const person of people) {
+      const heading = document.createElement('strong'); heading.textContent = `${group} (${people.filter(person => onlineNames.has(Number(person.id))).length} online)`; section.append(heading);
+      for (const person of [...people].sort((a, b) => Number(onlineNames.has(Number(b.id))) - Number(onlineNames.has(Number(a.id))))) {
         const isOnline = onlineNames.has(Number(person.id));
         const isAway = isOnline && Number(person.is_away) === 1;
-        const row = document.createElement('div'); row.className = 'buddy-row';
-        const label = document.createElement('span'); label.textContent = `${isOnline ? (isAway ? '◐' : '●') : '○'} ${person.username}${isAway ? ' (Away)' : ''}`;
+        const row = document.createElement('details'); row.className = `buddy-member ${isOnline ? 'online' : 'offline'}`;
+        if (selectedBuddyName === person.username) row.classList.add('selected');
+        const label = document.createElement('summary'); label.textContent = `${isOnline ? (isAway ? '◐' : '●') : '○'} ${person.username}${isAway ? ' (Away)' : ''}`;
         if (isAway && person.away_message) label.title = person.away_message;
+        label.addEventListener('click', () => {
+          selectedBuddyName = person.username;
+          $('#buddy-im').disabled = false;
+          $$('.buddy-member.selected', root).forEach(member => member.classList.remove('selected'));
+          row.classList.add('selected');
+        });
+        label.addEventListener('dblclick', () => openDirectMessage(person.username));
         row.append(label);
-        row.append(chatPersonButton(person.username, () => openDirectMessage(person.username), 'IM'));
-        row.append(chatPersonButton(person.username, () => composeMail(person.username), 'Mail'));
-        row.append(chatPersonButton(person.username, async () => {
+        const actions = document.createElement('div'); actions.className = 'buddy-member-actions';
+        actions.append(chatPersonButton(person.username, () => openDirectMessage(person.username), 'IM'));
+        actions.append(chatPersonButton(person.username, () => composeMail(person.username), 'Mail'));
+        actions.append(chatPersonButton(person.username, async () => {
           const next = prompt(`Move ${person.username} to which group?`, group);
           if (next !== null) { try { await chatApi('buddy_group_set', { name: person.username, group: next.trim() }); await refreshChatState(); } catch (error) { $('#buddy-status').textContent = error.message; } }
         }, 'Group'));
-        row.append(chatPersonButton(person.username, () => changeBuddy('buddy_remove', person.username), 'Remove'));
+        actions.append(chatPersonButton(person.username, () => changeBuddy('buddy_remove', person.username), 'Remove'));
+        row.append(actions);
         section.append(row);
       }
       root.append(section);
@@ -1950,6 +1963,22 @@
     if (!name) return;
     await changeBuddy('buddy_add', name); input.value = '';
   });
+  $('#buddy-im').addEventListener('click', () => {
+    if (selectedBuddyName) openDirectMessage(selectedBuddyName);
+  });
+  function toggleBuddyTool(which) {
+    const panel = $('#buddy-tool-panel');
+    const form = $(`#${which === 'add' ? 'buddy-form' : 'away-form'}`);
+    const show = panel.hidden || form.hidden;
+    panel.hidden = !show;
+    $('#buddy-form').hidden = true;
+    $('#away-form').hidden = true;
+    $('#buddy-add').setAttribute('aria-expanded', String(show && which === 'add'));
+    $('#buddy-away').setAttribute('aria-expanded', String(show && which === 'away'));
+    if (show) { form.hidden = false; form.querySelector('input,select')?.focus(); }
+  }
+  $('#buddy-add').addEventListener('click', () => toggleBuddyTool('add'));
+  $('#buddy-away').addEventListener('click', () => toggleBuddyTool('away'));
   window.setInterval(() => {
     if (!signedIn || document.hidden) return;
     if (!windows.get('chat').hidden || !windows.get('im').hidden) pollChat();

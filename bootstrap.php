@@ -70,6 +70,8 @@ function aov_db(): PDO {
     $db->exec('CREATE TABLE IF NOT EXISTS aov_browser_settings (user_id INTEGER PRIMARY KEY, home_url TEXT NOT NULL DEFAULT \'\', FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE)');
     $db->exec('CREATE TABLE IF NOT EXISTS aov_bookmarks (id INTEGER PRIMARY KEY, user_id INTEGER NOT NULL, url TEXT NOT NULL, title TEXT NOT NULL, created_at INTEGER NOT NULL, UNIQUE(user_id, url), FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE)');
     $db->exec('CREATE INDEX IF NOT EXISTS aov_bookmarks_user_order ON aov_bookmarks(user_id, created_at DESC)');
+    $db->exec('CREATE TABLE IF NOT EXISTS aov_channel_favorites (id INTEGER PRIMARY KEY, user_id INTEGER NOT NULL, channel_id TEXT NOT NULL, channel_path TEXT NOT NULL DEFAULT \'\', title TEXT NOT NULL, created_at INTEGER NOT NULL, UNIQUE(user_id, channel_id, channel_path), FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE)');
+    $db->exec('CREATE INDEX IF NOT EXISTS aov_channel_favorites_user_order ON aov_channel_favorites(user_id, created_at DESC)');
     $db->exec('CREATE TABLE IF NOT EXISTS aov_browser_history (id INTEGER PRIMARY KEY, user_id INTEGER NOT NULL, url TEXT NOT NULL, title TEXT NOT NULL, visited_at INTEGER NOT NULL, FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE)');
     $db->exec('CREATE INDEX IF NOT EXISTS aov_browser_history_user_order ON aov_browser_history(user_id, id DESC)');
     $db->exec('CREATE TABLE IF NOT EXISTS aov_buddies (user_id INTEGER NOT NULL, buddy_id INTEGER NOT NULL, created_at INTEGER NOT NULL, PRIMARY KEY(user_id,buddy_id), FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE, FOREIGN KEY(buddy_id) REFERENCES users(id) ON DELETE CASCADE)');

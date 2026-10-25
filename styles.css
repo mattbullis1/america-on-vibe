@@ -547,3 +547,19 @@
 .buddy-window .statusbar{flex:none;overflow:hidden;margin:0;padding:3px 5px;font-size:9px;text-overflow:ellipsis;white-space:nowrap}
 @media(min-width:601px) and (max-width:800px){.desktop-window.buddy-window,.desktop-window.buddy-window.maximized{position:absolute!important;left:auto!important;right:8px!important;top:8px!important;width:236px!important;height:min(540px,calc(100% - 16px))!important;min-height:330px!important;box-shadow:inset -1px -1px #404040,inset 1px 1px #fff,1px 1px 0 #161616,4px 6px 20px #10233a66}}
 @media(max-width:600px){.desktop-window.buddy-window{width:100%!important;height:100%!important;min-height:0;right:auto;top:auto}.buddy-window #buddy-groups{margin:4px 8px 0}.buddy-window .buddy-member summary{padding:6px 9px 6px 16px;font-size:13px}}
+/* Account-backed channel Favorites. */
+.favorites-heading{display:flex;align-items:center;justify-content:space-between;width:100%;border:0;padding:0 5px;color:#fff;background:transparent;font:inherit;text-align:left;cursor:pointer}
+.favorites-heading:hover,.favorites-heading:focus-visible{background:#ffffff24}
+.desktop-window[data-window="favorites"]{left:clamp(15px,34%,420px);top:35px;width:min(400px,calc(100% - 30px));height:min(470px,calc(100% - 50px))}
+.favorites-content{display:flex;flex-direction:column;min-height:0;background:#f9f8ed}
+.favorites-intro{padding:10px 12px;background:#eee9d9;color:#173c62;font-weight:bold;border-bottom:1px solid #afb7be}
+.favorites-list{flex:1;min-height:0;overflow:auto;padding:9px}
+.favorites-list>p{margin:8px;color:#4c5b68;line-height:1.5}
+.favorite-row{display:flex;align-items:stretch;gap:4px;margin-bottom:5px}
+.favorite-open{flex:1;min-width:0;padding:8px 10px;border:1px solid #8b9dad;background:#fff;color:#064c82;text-align:left;font-weight:bold;cursor:pointer}
+.favorite-open:hover,.favorite-open:focus-visible{background:#e8f3ff}
+.favorite-remove{width:33px;border:1px solid #a6a6a6;background:#e8e5df;color:#542a39;font-size:20px;cursor:pointer}
+.favorite-remove:hover,.favorite-remove:focus-visible{background:#ffe3df}
+#channel-favorite-toggle{align-self:flex-start;margin-left:auto;flex:none;border:1px solid #e9df93;border-radius:3px;background:#fff8d5;color:#795713;font-size:24px;line-height:1;padding:4px 8px;cursor:pointer}
+#channel-favorite-toggle:hover,#channel-favorite-toggle:focus-visible{background:#fff2a5}
+@media(max-width:800px){.desktop-window[data-window="favorites"]{left:auto;top:auto;width:100%!important;height:100%!important;max-height:100%!important}}

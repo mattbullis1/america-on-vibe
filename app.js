@@ -3,7 +3,7 @@
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
   const windows = new Map($$('.desktop-window').map(el => [el.dataset.window, el]));
-  const windowLabels = { welcome: 'Welcome', mail: 'Mail', browser: 'Internet', chat: 'Chat', buddies: 'Buddies', im: 'Instant Message', channels: 'Channels', 'channel-view': 'Channel', settings: 'Settings', help: 'Help' };
+  const windowLabels = { welcome: 'Welcome', mail: 'Mail', browser: 'Internet', chat: 'Chat', buddies: 'Buddies', im: 'Instant Message', channels: 'Channels', 'channel-view': 'Channel', favorites: 'Favorites', settings: 'Settings', help: 'Help' };
   const channelTitles = {
     aoltoday: 'Today', computing: 'Computing', entertainment: 'Entertainment',
     families: 'Families', games: 'Games', health: 'Health', influence: 'Influence',
@@ -47,6 +47,8 @@
   let keywordChoices = [];
   let activeKeywordChoice = -1;
   let currentChannel = null;
+  let channelFavorites = [];
+  let favoriteMutation = Promise.resolve();
   let channelRequest = 0;
   let csrf = initialState.csrf;
   $('#recovery-setup-note').hidden = Boolean(initialState.recoveryAvailable);
@@ -435,6 +437,9 @@
     chatLastId = 0;
     chatState = { userId: 0, buddies: [], blockedIds: [], online: [] };
     imConversations.clear(); imSeen.clear(); imContact = '';
+    channelFavorites = [];
+    currentChannel = null;
+    renderChannelFavorites();
     $('#app').hidden = true;
     $('#connecting').hidden = true;
     $('#entry').hidden = false;
@@ -472,7 +477,7 @@
     loadNews();
     connectionStage('Loading preferences…', 3, 2);
     $('#connection-detail').textContent = 'Your AOV account is signed on.';
-    await Promise.all([loadBrowserData(), loadMailList()]);
+    await Promise.all([loadBrowserData(), loadMailList(), loadChannelFavorites()]);
     $('#connection-detail').textContent = 'Finishing the modem handshake…';
     await connectionSound?.finished;
     if (!signedIn) return;
@@ -607,6 +612,7 @@
     if (signedIn && name === 'chat') refreshChatState().then(() => pollChat());
     if (signedIn && name === 'im') refreshChatState().then(() => pollChat());
     if (signedIn && name === 'buddies') refreshChatState().then(() => pollChat());
+    if (signedIn && name === 'favorites') loadChannelFavorites();
     if (signedIn && name === 'mail' && !$('#mail-compose-view').hidden) { /* preserve a draft */ }
     else if (signedIn && name === 'mail') loadMailList();
   }
@@ -1143,6 +1149,69 @@
         path: ['digital-cities', group.id] }))] });
   }
 
+  function favoritePath(path) { return path.join('/'); }
+
+  function updateChannelFavoriteButton() {
+    const button = $('#channel-favorite-toggle');
+    if (!currentChannel) { button.hidden = true; return; }
+    button.hidden = false;
+    const saved = channelFavorites.some(item => item.channel === currentChannel.id && item.path === favoritePath(currentChannel.path));
+    button.textContent = saved ? '★' : '☆';
+    button.setAttribute('aria-pressed', String(saved));
+    button.setAttribute('aria-label', saved ? 'Remove channel from Favorites' : 'Add channel to Favorites');
+    button.title = saved ? 'Remove from Favorites' : 'Add to Favorites';
+  }
+
+  function renderChannelFavorites() {
+    const list = $('#channel-favorites-list');
+    list.replaceChildren();
+    if (!channelFavorites.length) {
+      const empty = document.createElement('p');
+      empty.textContent = 'No favorites yet. Open a channel or subchannel and select ☆ to save it.';
+      list.append(empty);
+    }
+    for (const item of channelFavorites) {
+      const row = document.createElement('div'); row.className = 'favorite-row';
+      const open = document.createElement('button'); open.type = 'button';
+      open.className = 'favorite-open';
+      open.textContent = `★ ${item.title}`;
+      open.title = `${channelTitles[item.channel] || item.channel}${item.path ? ' / ' + item.path.replaceAll('/', ' / ') : ''}`;
+      open.addEventListener('click', () => {
+        if (!Object.hasOwn(channelTitles, item.channel)) { $('#favorites-status').textContent = 'This channel is no longer available.'; return; }
+        showChannel(item.channel, item.path ? item.path.split('/') : []);
+      });
+      const remove = document.createElement('button'); remove.type = 'button';
+      remove.className = 'favorite-remove'; remove.textContent = '×';
+      remove.setAttribute('aria-label', `Remove ${item.title} from Favorites`);
+      remove.addEventListener('click', () => changeChannelFavorite('channel_favorite_remove', { id: Number(item.id) }));
+      row.append(open, remove); list.append(row);
+    }
+    updateChannelFavoriteButton();
+  }
+
+  async function loadChannelFavorites() {
+    if (!signedIn) return;
+    try {
+      const response = await fetch('api.php?action=channel_favorites', { credentials: 'same-origin', cache: 'no-store' });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || 'Favorites are unavailable.');
+      channelFavorites = Array.isArray(data.favorites) ? data.favorites : [];
+      renderChannelFavorites();
+    } catch (error) { $('#favorites-status').textContent = error.message; }
+  }
+
+  function changeChannelFavorite(action, body) {
+    favoriteMutation = favoriteMutation.catch(() => {}).then(() => api(action, body));
+    return favoriteMutation.then(data => {
+      channelFavorites = Array.isArray(data.favorites) ? data.favorites : [];
+      renderChannelFavorites();
+      $('#favorites-status').textContent = action === 'channel_favorite_add' ? 'Added to Favorites.' : 'Removed from Favorites.';
+    }).catch(error => {
+      $('#favorites-status').textContent = error.message;
+      $('#channel-view-status').textContent = error.message;
+    });
+  }
+
   async function showChannel(id, path = []) {
     if (!Object.hasOwn(channelTitles, id)) return;
     $('#channel-view-body').querySelector('.channel-radio-player audio')?.pause();
@@ -1173,7 +1242,9 @@
         cleanPath.push(slug);
         node = child;
       }
+      if (cleanPath.length !== path.length) throw new Error('This subchannel is no longer available.');
       currentChannel = { id, path: cleanPath, config };
+      updateChannelFavoriteButton();
       const title = String(node.title || config.title || channelTitles[id]);
       windowLabels['channel-view'] = title;
       renderTaskbar();
@@ -1802,6 +1873,12 @@
     if (maximize) { windows.get(maximize.dataset.maximize).classList.toggle('maximized'); openWindow(maximize.dataset.maximize); }
     if (buddy) openDirectMessage(buddy.dataset.buddy);
   });
+  $('#channel-favorite-toggle').addEventListener('click', () => {
+    if (!currentChannel) return;
+    const saved = channelFavorites.find(item => item.channel === currentChannel.id && item.path === favoritePath(currentChannel.path));
+    if (saved) changeChannelFavorite('channel_favorite_remove', { id: Number(saved.id) });
+    else changeChannelFavorite('channel_favorite_add', { channel: currentChannel.id, path: favoritePath(currentChannel.path) });
+  });
   $('#global-go').addEventListener('click', goKeywordOrAddress);
   $('#global-back').addEventListener('click', () => { openWindow('browser'); navigateBrowser(-1); });
   $('#global-forward').addEventListener('click', () => { openWindow('browser'); navigateBrowser(1); });
@@ -2029,6 +2106,7 @@
   if (initialState.loggedIn) {
     $('#admin-link').hidden = !initialState.isAdmin;
     loadBrowserData();
+    loadChannelFavorites();
     loadMailList();
     setPreviewName(initialState.name || 'Member');
     $('#account-email').textContent = initialState.email || '';

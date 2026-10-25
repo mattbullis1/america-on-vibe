@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 require __DIR__ . '/bootstrap.php';
 require __DIR__ . '/browser.php';
+require __DIR__ . '/channel-favorites.php';
 
 use Delight\Auth\AuthException;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -17,6 +18,11 @@ if ($action === 'browser_state' && $_SERVER['REQUEST_METHOD'] === 'GET') {
     if (!$auth->isLoggedIn()) aov_json(['error' => 'Please sign on again'], 401);
     aov_touch($auth);
     aov_json(aov_browser_state((int) $auth->getUserId()));
+}
+if ($action === 'channel_favorites' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+    if (!$auth->isLoggedIn()) aov_json(['error' => 'Please sign on again'], 401);
+    aov_touch($auth);
+    aov_json(aov_channel_favorites((int) $auth->getUserId()));
 }
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') aov_json(['error' => 'Method not allowed'], 405);
 $input = json_decode((string) file_get_contents('php://input'), true);
@@ -158,6 +164,13 @@ try {
         case 'browser_history_clear':
             if (!$auth->isLoggedIn()) aov_json(['error' => 'Please sign on again'], 401);
             $result = aov_browser_action($action, $input, (int) $auth->getUserId());
+            aov_touch($auth);
+            aov_json($result);
+
+        case 'channel_favorite_add':
+        case 'channel_favorite_remove':
+            if (!$auth->isLoggedIn()) aov_json(['error' => 'Please sign on again'], 401);
+            $result = aov_channel_favorite_action($action, $input, (int) $auth->getUserId());
             aov_touch($auth);
             aov_json($result);
 

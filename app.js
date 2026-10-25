@@ -823,6 +823,22 @@
   }
 
   function makeChannels() {
+    const buttonArtwork = {
+      aoltoday: 'aov-today-banner.webp',
+      sports: 'sports-channel-banner.webp',
+      influence: 'influence-channel-banner.webp',
+      travel: 'travel-channel-banner.webp',
+      international: 'international-channel-banner.webp',
+      personalfinance: 'personal-finance-channel-banner.webp',
+      workplace: 'workplace-channel-banner.webp',
+      computing: 'computing-channel-banner.webp',
+      researchandlearn: 'research-and-learn-channel-banner.webp',
+      entertainment: 'entertainment-channel-banner.webp',
+      interests: 'interests-channel-banner.webp',
+      lifestyles: 'lifestyles-channel-banner.webp',
+      health: 'health-channel-banner.webp',
+      families: 'families-channel-banner.webp'
+    };
     const columns = {
       'channel-search': ['search'],
       'channel-left': ['aoltoday', 'news', 'sports'],
@@ -839,11 +855,15 @@
         if (image === 'digital-cities') button.dataset.path = 'digital-cities';
         button.title = `Open ${title} channel`;
         button.setAttribute('aria-label', title);
-        const img = document.createElement('img');
-        img.src = `assets/channels/${image}.svg`;
-        img.alt = '';
-        img.loading = 'lazy';
-        button.append(img);
+        button.className = `channel-art-button channel-art-button--${image}`;
+        const artwork = buttonArtwork[image]
+          ? `assets/${buttonArtwork[image]}`
+          : `assets/channels/scenes/${image}.svg`;
+        button.style.setProperty('--button-art', `url("${artwork}")`);
+        const label = document.createElement('span');
+        label.className = 'channel-art-label';
+        label.textContent = title;
+        button.append(label);
         column.append(button);
       });
     });

@@ -1,0 +1,128 @@
+<?php
+/*
+ * @package AJAX_Chat
+ * @author Sebastian Tschan
+ * @author Peter
+ * @author Tibor Repček (tiborepcek.com)
+ * @copyright (c) Sebastian Tschan
+ * @license Modified MIT License
+ * @link https://blueimp.net/ajax/
+ */
+
+$lang = array();
+$lang['title'] = 'AJAX Chat';
+$lang['userName'] = 'Meno';
+$lang['password'] = 'Heslo';
+$lang['login'] = 'Prihlásiť';
+$lang['logout'] = 'Odhlásiť';
+$lang['channel'] = 'Kanál';
+$lang['style'] = 'Štýl';
+$lang['language'] = 'Jazyk';
+$lang['inputLineBreak'] = 'Koniec riadku: SHIFT + ENTER';
+$lang['messageSubmit'] = 'Poslať';
+$lang['registeredUsers'] = 'Registrovaní používatelia';
+$lang['onlineUsers'] = 'Prihlásení používatelia';
+$lang['toggleAutoScroll'] = 'Zapnúť/vypnúť automatické posúvanie obsahu';
+$lang['toggleAudio'] = 'Zapnúť/vypnúť zvuk';
+$lang['toggleHelp'] = 'Zobraziť/skryť pomoc';
+$lang['toggleSettings'] = 'Zobraziť/skryť nastavenia';
+$lang['toggleOnlineList'] = 'Zobraziť/skryť zoznam pripojených používateľov';
+$lang['bbCodeLabelBold'] = 'b';
+$lang['bbCodeLabelItalic'] = 'i';
+$lang['bbCodeLabelUnderline'] = 'u';
+$lang['bbCodeLabelQuote'] = 'Citovať';
+$lang['bbCodeLabelCode'] = 'Kód';
+$lang['bbCodeLabelURL'] = 'URL';
+$lang['bbCodeLabelImg'] = 'Obrázok';
+$lang['bbCodeLabelColor'] = 'Farba písma';
+$lang['bbCodeLabelEmoticon'] = 'Emotikony';
+$lang['bbCodeTitleBold'] = 'Tučné: [b]text[/b]';
+$lang['bbCodeTitleItalic'] = 'Kurzívou: [i]text[/i]';
+$lang['bbCodeTitleUnderline'] = 'Podčiarknuté: [u]text[/u]';
+$lang['bbCodeTitleQuote'] = 'Citovať text: [quote]text[/quote] alebo [quote=autor]text[/quote]';
+$lang['bbCodeTitleCode'] = 'Zobraziť kód: [code]kód[/code]';
+$lang['bbCodeTitleURL'] = 'Vložiť URL: [url]http://www.example.org/[/url] alebo [url=http://www.example.org/]text[/url]';
+$lang['bbCodeTitleImg'] = 'Vložiť obrázok: [img]http://example.org/image.jpg[/img]';
+$lang['bbCodeTitleColor'] = 'Farba písma: [color=red]text[/color]';
+$lang['bbCodeTitleEmoticon'] = 'Zoznam emotikôn';
+$lang['help'] = 'Pomoc';
+$lang['helpItemDescJoin'] = 'Prihlásenie do kanálu:';
+$lang['helpItemCodeJoin'] = '/join Názov_kanálu';
+$lang['helpItemDescJoinCreate'] = 'Vytvoriť súkromný chat (Iba pre registrovaných používateľov):';
+$lang['helpItemCodeJoinCreate'] = '/join';
+$lang['helpItemDescInvite'] = 'Pozvať niekoho do súkromného rozhovoru:';
+$lang['helpItemCodeInvite'] = '/invite Meno_používateľa';
+$lang['helpItemDescUninvite'] = 'Odmietnuť pozvanie:';
+$lang['helpItemCodeUninvite'] = '/uninvite Meno_používateľa';
+$lang['helpItemDescLogout'] = 'Odhlásenie z chatu:';
+$lang['helpItemCodeLogout'] = '/quit';
+$lang['helpItemDescPrivateMessage'] = 'Súkromná správa:';
+$lang['helpItemCodePrivateMessage'] = '/msg Meno_používateľa Text';
+$lang['helpItemDescQueryOpen'] = 'Otvoriť súkromný kanál:';
+$lang['helpItemCodeQueryOpen'] = '/query Meno_používateľa';
+$lang['helpItemDescQueryClose'] = 'Zavrieť súkromný kanál:';
+$lang['helpItemCodeQueryClose'] = '/query';
+$lang['helpItemDescAction'] = 'Opísať akciu:';
+$lang['helpItemCodeAction'] = '/action Text';
+$lang['helpItemDescDescribe'] = 'Opísať akciu v súkromnej správe:';
+$lang['helpItemCodeDescribe'] = '/describe Meno_používateľa Text';
+$lang['helpItemDescIgnore'] = 'Ignoruj/akceptuj správu od používateľa:';
+$lang['helpItemCodeIgnore'] = '/ignore (accept) Meno_používateľa';
+$lang['helpItemDescIgnoreList'] = 'Zoznam zamietnutých používateľov:';
+$lang['helpItemCodeIgnoreList'] = '/ignore';
+$lang['helpItemDescWhereis'] = 'Zobraziť kanál používateľa:';
+$lang['helpItemCodeWhereis'] = '/whereis Meno_používateľa';
+$lang['helpItemDescKick'] = 'Vylúčiť používateľa (Iba Moderátori):';
+$lang['helpItemCodeKick'] = '/kick Meno_používateľa [čas vylúčenia v minútach]';
+$lang['helpItemDescUnban'] = 'Prijať vylúčeného používateľa (Iba Moderátori):';
+$lang['helpItemCodeUnban'] = '/unban Meno_používateľa';
+$lang['helpItemDescBans'] = 'Zoznam vylúčených používateľov (Iba Moderátori):';
+$lang['helpItemCodeBans'] = '/bans';
+$lang['helpItemDescWhois'] = 'Zobraz IP používateľa (Iba Moderátori):';
+$lang['helpItemCodeWhois'] = '/whois Meno_používateľa';
+$lang['helpItemDescWho'] = 'Zoznam prihlásených používateľov:';
+$lang['helpItemCodeWho'] = '/who [Meno_kanálu]';
+$lang['helpItemDescList'] = 'Zoznam dostupných kanálov:';
+$lang['helpItemCodeList'] = '/list';
+$lang['helpItemDescRoll'] = 'Hodiť kocku:';
+$lang['helpItemCodeRoll'] = '/roll [číslo]d[strana]';
+$lang['helpItemDescNick'] = 'Zmeniť používateľské meno:';
+$lang['helpItemCodeNick'] = '/nick Nové_meno_používateľa';
+$lang['settings'] = 'Nastavenia';
+$lang['settingsBBCode'] = 'Povoliť BBCode:';
+$lang['settingsBBCodeImages'] = 'Povoliť obrázok v BBCode:';
+$lang['settingsBBCodeColors'] = 'Povoliť farbu písma v BBCode:';
+$lang['settingsHyperLinks'] = 'Povoliť odkazy:';
+$lang['settingsLineBreaks'] = 'Povoliť zlom riadku:';
+$lang['settingsEmoticons'] = 'Povoliť emotikony:';
+$lang['settingsAutoFocus'] = 'Kurzor nastav automaticky na písanie správy:';
+$lang['settingsMaxMessages'] = 'Maximálny počet správ v zozname chatu:';
+$lang['settingsWordWrap'] = 'Povoliť automatické delenie dlhých slov:';
+$lang['settingsMaxWordLength'] = 'Maximálna dĺžka slova pred automatickým delením:';
+$lang['settingsDateFormat'] = 'Formát zobrazovaného dátumu a času:';
+$lang['settingsPersistFontColor'] = 'Pevná farba písma:';
+$lang['settingsAudioSupport'] = 'Podpora zvuku:';
+$lang['settingsAudioVolume'] = 'Hlasitosť zvuku:';
+$lang['settingsSoundReceive'] = 'Zvuk pre prijaté správy:';
+$lang['settingsSoundSend'] = 'Zvuk pre odoslané správy:';
+$lang['settingsSoundEnter'] = 'Zvuk pre prihlásenie a správy o prihlásení do kanálu:';
+$lang['settingsSoundLeave'] = 'Zvuk pre odhlásenie a správy o opustení kanálu:';
+$lang['settingsSoundChatBot'] = 'Zvuk pre správy Chatbota:';
+$lang['settingsSoundError'] = 'Zvuk pre chybové správy:';
+$lang['settingsSoundPrivate'] = 'Zvuk pre súkromné správy:';
+$lang['settingsBlink'] = 'Pri novej správe blikať nadpis okna:';
+$lang['settingsBlinkInterval'] = 'Interval blikania v milisekundách:';
+$lang['settingsBlinkIntervalNumber'] = 'Interval počtu blikaní:';
+$lang['playSelectedSound'] = 'Prehrať zvolený zvuk';
+$lang['requiresJavaScript'] = 'Pre tento chat sa vyžaduje nainštalovať JavaScript.';
+$lang['errorInvalidUser'] = 'Neplatné používateľské meno.';
+$lang['errorUserInUse'] = 'Používateľské meno je už obsadené.';
+$lang['errorBanned'] = 'Používateľ alebo IP je zakázané.';
+$lang['errorMaxUsersLoggedIn'] = 'Chat dosiahol maximálny počet prihlásených používateľov.';
+$lang['errorChatClosed'] = 'Chat je momentálne nedostupný.';
+$lang['logsTitle'] = 'AJAX Chat - Záznamy';
+$lang['logsDate'] = 'Dátum';
+$lang['logsTime'] = 'Čas';
+$lang['logsSearch'] = 'Vyhľadávanie';
+$lang['logsPrivateChannels'] = 'Súkromný kanál';
+$lang['logsPrivateMessages'] = 'Súkromná správa';

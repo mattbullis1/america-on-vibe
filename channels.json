@@ -1,0 +1,21 @@
+{
+  "aoltoday": "https://www.npr.org/sections/news/",
+  "computing": "https://www.npr.org/sections/technology/",
+  "entertainment": "https://www.npr.org/sections/culture/",
+  "families": "https://www.npr.org/search/?query=family",
+  "health": "https://www.npr.org/sections/your-health/",
+  "influence": "https://www.npr.org/sections/politics/",
+  "interests": "https://www.npr.org/sections/arts/",
+  "international": "https://www.npr.org/sections/world/",
+  "lifestyles": "https://www.npr.org/lifekit/",
+  "local": "https://www.npr.org/search/?query=local%20news",
+  "music": "https://www.npr.org/music/",
+  "news": "https://www.npr.org/sections/news/",
+  "personalfinance": "https://www.npr.org/search/?query=personal%20finance",
+  "researchandlearn": "https://www.npr.org/sections/science/",
+  "search": "https://www.npr.org/search/",
+  "shopping": "https://meh.com/",
+  "sports": "https://www.npr.org/sections/sports/",
+  "travel": "https://www.npr.org/search/?query=travel",
+  "workplace": "https://www.npr.org/search/?query=workplace"
+}

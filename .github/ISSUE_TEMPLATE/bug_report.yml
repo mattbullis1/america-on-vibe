@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a problem with AOV
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Please remove passwords, cookies, recovery links, and private configuration from screenshots or logs."
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem and the AOV screen or module involved.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Sign on\n2. Open ...\n3. Click ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+      placeholder: "Chrome on Android tablet"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or error details
+      description: Attach redacted screenshots or paste a short error message if available.

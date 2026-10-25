@@ -1,0 +1,96 @@
+{
+  "id": "interests",
+  "title": "Interests",
+  "icon": "🌟",
+  "logo": "assets/aov-logo.png",
+  "description": "Explore food, home, books, crafts, faith, and other interests.",
+  "children": [
+    { "id": "food-cooking", "title": "Food & Cooking", "icon": "🍳", "description": "Recipes, cooking ideas, and time around the table.", "children": [], "sections": [
+      { "type": "feeds", "title": "Food & Cooking", "items": [
+        { "id": "food-bonappetit", "title": "Bon Appétit", "url": "https://www.bonappetit.com/feed/rss" },
+        { "id": "food-kitchn", "title": "The Kitchn", "url": "https://www.thekitchn.com/main.rss" }
+      ] },
+      { "type": "links", "title": "Find a Recipe", "items": [
+        { "type": "link", "label": "Bon Appétit recipes", "url": "https://www.bonappetit.com/recipes" },
+        { "type": "link", "label": "Budget Bytes recipes", "url": "https://www.budgetbytes.com/recipes/" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "home-garden", "title": "Home & Garden", "icon": "🌿", "description": "Make a place your own, indoors and out.", "children": [], "sections": [
+      { "type": "feeds", "title": "At Home", "items": [
+        { "id": "home-apartmenttherapy", "title": "Apartment Therapy", "url": "https://www.apartmenttherapy.com/main.rss" },
+        { "id": "home-gardenersworld", "title": "Gardeners' World", "url": "https://www.gardenersworld.com/feed/" }
+      ] },
+      { "type": "links", "title": "Home Projects", "items": [
+        { "type": "link", "label": "Home project ideas", "url": "https://www.apartmenttherapy.com/projects" },
+        { "type": "link", "label": "University garden guides", "url": "https://extension.umn.edu/yard-and-garden" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "pets", "title": "Pets", "icon": "🐾", "description": "Care, companionship, and stories about our animals.", "children": [], "sections": [
+      { "type": "feeds", "title": "Dogs & Companions", "items": [
+        { "id": "pets-akc", "title": "American Kennel Club", "url": "https://www.akc.org/expert-advice/feed/" }
+      ] },
+      { "type": "links", "title": "Pet Care", "items": [
+        { "type": "link", "label": "ASPCA pet care", "url": "https://www.aspca.org/pet-care" },
+        { "type": "link", "label": "AKC expert advice", "url": "https://www.akc.org/expert-advice/" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "books-reading", "title": "Books & Reading", "icon": "📚", "description": "Reading lists, book talk, and a quiet corner for stories.", "children": [], "sections": [
+      { "type": "feeds", "title": "Book Talk", "items": [
+        { "id": "books-bookriot", "title": "Book Riot", "url": "https://bookriot.com/feed/" },
+        { "id": "books-lithub", "title": "Literary Hub", "url": "https://lithub.com/feed/" }
+      ] },
+      { "type": "links", "title": "Find a Book", "items": [
+        { "type": "link", "label": "Project Gutenberg free books", "url": "https://www.gutenberg.org/" },
+        { "type": "link", "label": "Open Library", "url": "https://openlibrary.org/" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "christianity-today", "title": "Christianity Today", "icon": "✝️", "description": "Christianity Today headlines, faith, and church life.", "children": [], "sections": [
+      { "type": "feeds", "title": "Christianity Today Headlines", "items": [
+        { "id": "ct-headlines", "title": "Christianity Today", "url": "https://www.christianitytoday.com/feed/" }
+      ] },
+      { "type": "links", "title": "Explore Christianity Today", "items": [
+        { "type": "link", "label": "Christianity Today home", "url": "https://www.christianitytoday.com/" },
+        { "type": "link", "label": "News", "url": "https://www.christianitytoday.com/news/" },
+        { "type": "link", "label": "Church Life", "url": "https://www.christianitytoday.com/church-life/" },
+        { "type": "link", "label": "Theology", "url": "https://www.christianitytoday.com/theology/" }
+      ] }
+    ], "crosslinks": [
+      { "channel": "families", "label": "Families", "icon": "👨‍👩‍👧" },
+      { "channel": "researchandlearn", "label": "Research & Learn", "icon": "📚" }
+    ] },
+    { "id": "crafts-making", "title": "Crafts & Making", "icon": "🧵", "description": "Hands-on projects and creative ideas.", "children": [], "sections": [
+      { "type": "feeds", "title": "Make Something", "items": [
+        { "id": "crafts-make", "title": "Make: Crafts", "url": "https://makezine.com/category/craft/feed/" }
+      ] },
+      { "type": "links", "title": "Project Ideas", "items": [
+        { "type": "link", "label": "Instructables crafts", "url": "https://www.instructables.com/craft/" }
+      ] }
+    ], "crosslinks": [] }
+  ],
+  "sections": [
+    { "type": "feeds", "title": "Around the Hobby House", "navLabel": "Headlines", "icon": "📰", "items": [
+      { "id": "interests-bonappetit", "title": "Bon Appétit", "url": "https://www.bonappetit.com/feed/rss" },
+      { "id": "interests-apartmenttherapy", "title": "Apartment Therapy", "url": "https://www.apartmenttherapy.com/main.rss" },
+      { "id": "interests-gardenersworld", "title": "Gardeners' World", "url": "https://www.gardenersworld.com/feed/" },
+      { "id": "interests-akc", "title": "American Kennel Club", "url": "https://www.akc.org/expert-advice/feed/" },
+      { "id": "interests-bookriot", "title": "Book Riot", "url": "https://bookriot.com/feed/" },
+      { "id": "interests-make", "title": "Make: Crafts", "url": "https://makezine.com/category/craft/feed/" }
+    ] },
+    { "type": "links", "title": "Explore a Hobby", "navLabel": "Explore", "icon": "🧭", "items": [
+      { "type": "link", "label": "Find free books", "url": "https://www.gutenberg.org/" },
+      { "type": "link", "label": "Try a craft project", "url": "https://www.instructables.com/craft/" },
+      { "type": "link", "label": "Explore garden guides", "url": "https://extension.umn.edu/yard-and-garden" }
+    ] },
+    { "type": "links", "title": "Faith & Reflection", "navLabel": "Faith", "icon": "✝️", "items": [
+      { "type": "channel", "label": "Christianity Today", "channel": "interests", "path": ["christianity-today"] }
+    ] },
+    { "type": "links", "title": "Hobby House Chat", "navLabel": "Chat", "icon": "💬", "items": [
+      { "type": "chat", "label": "Hobby House", "roomName": "Hobby House" }
+    ] }
+  ],
+  "crosslinks": [
+    { "channel": "shopping", "label": "Shopping", "icon": "🛍️" },
+    { "channel": "researchandlearn", "label": "Research & Learn", "icon": "📚" },
+    { "channel": "aoltoday", "label": "AOV Today", "icon": "☀️" }
+  ]
+}

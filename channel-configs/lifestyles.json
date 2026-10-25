@@ -1,0 +1,93 @@
+{
+  "id": "lifestyles",
+  "title": "Lifestyles",
+  "icon": "✨",
+  "logo": "assets/aov-logo.png",
+  "description": "Personal style, relationships, and everyday life.",
+  "children": [
+    { "id": "fitness", "title": "Fitness", "icon": "🏋️", "description": "Everyday movement, exercise ideas, and finding activities you enjoy.", "children": [], "sections": [
+      { "type": "feeds", "title": "Fitness & Movement", "items": [
+        { "id": "fitness-guardian", "title": "The Guardian Fitness", "url": "https://www.theguardian.com/lifeandstyle/fitness/rss" },
+        { "id": "fitness-self", "title": "SELF Fitness", "url": "https://www.self.com/feed/fitness/rss" }
+      ] },
+      { "type": "links", "title": "Get Moving", "items": [
+        { "type": "link", "label": "Move Your Way", "url": "https://odphp.health.gov/moveyourway/" },
+        { "type": "link", "label": "SELF Fitness", "url": "https://www.self.com/fitness" }
+      ] },
+      { "type": "links", "title": "Fitness Chat", "items": [
+        { "type": "chat", "label": "Life & Style", "roomName": "Life & Style" }
+      ] }
+    ], "crosslinks": [
+      { "channel": "sports", "path": ["running"], "label": "Sports · Running", "icon": "🏃" },
+      { "channel": "health", "label": "Health", "icon": "🩺" },
+      { "channel": "lifestyles", "path": ["wellbeing"], "label": "Wellbeing", "icon": "🌤️" }
+    ] },
+    { "id": "style-beauty", "title": "Style & Beauty", "icon": "👗", "description": "Personal style, fashion, and beauty ideas.", "children": [], "sections": [
+      { "type": "feeds", "title": "Style & Beauty", "items": [
+        { "id": "style-vogue", "title": "Vogue", "url": "https://www.vogue.com/feed/rss" },
+        { "id": "style-allure", "title": "Allure", "url": "https://www.allure.com/feed/rss" }
+      ] },
+      { "type": "links", "title": "Explore Style", "items": [
+        { "type": "link", "label": "Vogue fashion", "url": "https://www.vogue.com/fashion" },
+        { "type": "link", "label": "Allure beauty", "url": "https://www.allure.com/topic/beauty" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "relationships", "title": "Relationships", "icon": "💞", "description": "Friendship, dating, and connecting with others.", "children": [], "sections": [
+      { "type": "feeds", "title": "Relationships", "items": [
+        { "id": "relationships-guardian", "title": "The Guardian Relationships", "url": "https://www.theguardian.com/lifeandstyle/relationships/rss" },
+        { "id": "relationships-tinybuddha", "title": "Tiny Buddha", "url": "https://tinybuddha.com/feed/" }
+      ] },
+      { "type": "links", "title": "More Perspectives", "items": [
+        { "type": "link", "label": "Greater Good: Relationships", "url": "https://greatergood.berkeley.edu/relationships" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "everyday-living", "title": "Everyday Living", "icon": "☀️", "description": "Routines, priorities, and making room for what matters.", "children": [], "sections": [
+      { "type": "feeds", "title": "Living Well", "items": [
+        { "id": "living-minimalists", "title": "The Minimalists", "url": "https://www.theminimalists.com/feed/" },
+        { "id": "living-tinybuddha", "title": "Tiny Buddha", "url": "https://tinybuddha.com/feed/" }
+      ] },
+      { "type": "links", "title": "Everyday Ideas", "items": [
+        { "type": "link", "label": "The Minimalists", "url": "https://www.theminimalists.com/" },
+        { "type": "link", "label": "Greater Good", "url": "https://greatergood.berkeley.edu/" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "wellbeing", "title": "Wellbeing", "icon": "🌤️", "description": "Rest, movement, and personal wellbeing; visit Health for medical topics.", "children": [], "sections": [
+      { "type": "feeds", "title": "Wellbeing Stories", "items": [
+        { "id": "wellbeing-self", "title": "SELF", "url": "https://www.self.com/feed/rss" },
+        { "id": "wellbeing-guardian", "title": "The Guardian Wellbeing", "url": "https://www.theguardian.com/lifeandstyle/health-and-wellbeing/rss" }
+      ] },
+      { "type": "links", "title": "More Wellbeing", "items": [
+        { "type": "link", "label": "SELF", "url": "https://www.self.com/" }
+      ] }
+    ], "crosslinks": [{ "channel": "health", "label": "Health", "icon": "🩺" }] },
+    { "id": "life-stories", "title": "Life Stories", "icon": "📖", "description": "Personal stories, reflection, and inspiration.", "children": [], "sections": [
+      { "type": "feeds", "title": "Life Stories", "items": [
+        { "id": "stories-tinybuddha", "title": "Tiny Buddha", "url": "https://tinybuddha.com/feed/" },
+        { "id": "stories-oprah", "title": "Oprah Daily", "url": "https://www.oprahdaily.com/rss/all.xml" }
+      ] }
+    ], "crosslinks": [] }
+  ],
+  "sections": [
+    { "type": "feeds", "title": "Lifestyles Today", "navLabel": "Headlines", "icon": "📰", "items": [
+      { "id": "lifestyles-vogue", "title": "Vogue", "url": "https://www.vogue.com/feed/rss" },
+      { "id": "lifestyles-allure", "title": "Allure", "url": "https://www.allure.com/feed/rss" },
+      { "id": "lifestyles-relationships", "title": "The Guardian Relationships", "url": "https://www.theguardian.com/lifeandstyle/relationships/rss" },
+      { "id": "lifestyles-minimalists", "title": "The Minimalists", "url": "https://www.theminimalists.com/feed/" },
+      { "id": "lifestyles-tinybuddha", "title": "Tiny Buddha", "url": "https://tinybuddha.com/feed/" },
+      { "id": "lifestyles-self", "title": "SELF", "url": "https://www.self.com/feed/rss" }
+    ] },
+    { "type": "links", "title": "Life & Style", "navLabel": "Explore", "icon": "🧭", "items": [
+      { "type": "link", "label": "Personal style", "url": "https://www.vogue.com/fashion" },
+      { "type": "link", "label": "Relationships", "url": "https://greatergood.berkeley.edu/relationships" },
+      { "type": "link", "label": "Everyday balance", "url": "https://www.theminimalists.com/" }
+    ] },
+    { "type": "links", "title": "Life & Style Chat", "navLabel": "Chat", "icon": "💬", "items": [
+      { "type": "chat", "label": "Life & Style", "roomName": "Life & Style" }
+    ] }
+  ],
+  "crosslinks": [
+    { "channel": "health", "label": "Health", "icon": "🩺" },
+    { "channel": "families", "label": "Families", "icon": "👨‍👩‍👧" },
+    { "channel": "interests", "label": "Interests", "icon": "🌟" }
+  ]
+}

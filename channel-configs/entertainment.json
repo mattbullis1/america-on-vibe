@@ -1,0 +1,93 @@
+{
+  "id": "entertainment",
+  "title": "Entertainment",
+  "icon": "🎬",
+  "logo": "assets/aov-logo.png",
+  "description": "Movies, television, music, and the stories behind the spotlight.",
+  "children": [
+    { "id": "sci-fi", "title": "Sci-Fi", "icon": "🛸", "description": "Science-fiction films, television, books, and fan worlds.", "children": [], "sections": [
+      { "type": "feeds", "title": "Sci-Fi Headlines", "items": [
+        { "id": "scifi-scifinow", "title": "SciFiNow", "url": "https://www.scifinow.co.uk/category/news/feed/" },
+        { "id": "scifi-guardian-books", "title": "The Guardian Science Fiction Books", "url": "https://www.theguardian.com/books/science-fiction/rss" }
+      ] },
+      { "type": "feeds", "title": "Fan Discussion", "items": [
+        { "id": "scifi-lemmy", "title": "Lemmy Science Fiction", "url": "https://lemmy.world/feeds/c/sciencefiction.xml?sort=Hot" }
+      ] },
+      { "type": "links", "title": "Explore Sci-Fi", "items": [
+        { "type": "link", "label": "SciFiNow", "url": "https://www.scifinow.co.uk/" },
+        { "type": "link", "label": "Lemmy Science Fiction", "url": "https://lemmy.world/c/sciencefiction" },
+        { "type": "chat", "label": "Screen Talk", "roomName": "Screen Talk" }
+      ] }
+    ], "crosslinks": [
+      { "channel": "entertainment", "path": ["movies"], "label": "Movies", "icon": "🎬" },
+      { "channel": "entertainment", "path": ["television"], "label": "Television", "icon": "📺" },
+      { "channel": "interests", "path": ["books-reading"], "label": "Books & Reading", "icon": "📚" }
+    ] },
+    { "id": "movies", "title": "Movies", "icon": "🎬", "description": "Film news, reviews, and what is playing.", "children": [], "sections": [
+      { "type": "feeds", "title": "At the Movies", "items": [
+        { "id": "movies-indiewire", "title": "IndieWire", "url": "https://www.indiewire.com/feed/" },
+        { "id": "movies-variety", "title": "Variety Film", "url": "https://variety.com/v/film/feed/" },
+        { "id": "movies-npr", "title": "NPR Pop Culture", "url": "https://feeds.npr.org/1048/rss.xml" }
+      ] },
+      { "type": "links", "title": "Movie Desk", "items": [
+        { "type": "link", "label": "Movies in theaters", "url": "https://www.rottentomatoes.com/browse/movies_in_theaters" },
+        { "type": "link", "label": "Classic films at Internet Archive", "url": "https://archive.org/details/movies" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "television", "title": "Television", "icon": "📺", "description": "The small screen, streaming, and familiar shows.", "children": [], "sections": [
+      { "type": "feeds", "title": "On Television", "items": [
+        { "id": "tv-thr", "title": "The Hollywood Reporter", "url": "https://www.hollywoodreporter.com/feed/" },
+        { "id": "tv-variety", "title": "Variety", "url": "https://variety.com/feed/" }
+      ] },
+      { "type": "links", "title": "TV Guide", "items": [
+        { "type": "link", "label": "TV listings at TV Guide", "url": "https://www.tvguide.com/listings/" },
+        { "type": "link", "label": "Find where a show streams", "url": "https://www.justwatch.com/us" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "music", "title": "Music", "icon": "🎵", "description": "Artists, albums, concerts, and the songs we love.", "children": [], "sections": [
+      { "type": "feeds", "title": "Music Scene", "items": [
+        { "id": "music-billboard", "title": "Billboard", "url": "https://www.billboard.com/feed/" },
+        { "id": "music-pitchfork", "title": "Pitchfork", "url": "https://pitchfork.com/feed/feed-news/rss" },
+        { "id": "music-guardian", "title": "The Guardian Music", "url": "https://www.theguardian.com/music/rss" }
+      ] },
+      { "type": "links", "title": "Listen & Talk", "items": [
+        { "type": "link", "label": "Billboard charts", "url": "https://www.billboard.com/charts/" },
+        { "type": "chat", "label": "Music Lounge", "roomName": "Music Lounge" }
+      ] }
+    ], "crosslinks": [{ "channel": "music", "label": "Music Channel", "icon": "🎵" }] },
+    { "id": "stage-culture", "title": "Stage & Culture", "icon": "🎭", "description": "Theater, performers, and wider entertainment culture.", "children": [], "sections": [
+      { "type": "feeds", "title": "Culture Stories", "items": [
+        { "id": "stage-npr", "title": "NPR Pop Culture", "url": "https://feeds.npr.org/1048/rss.xml" },
+        { "id": "stage-thr", "title": "The Hollywood Reporter", "url": "https://www.hollywoodreporter.com/feed/" }
+      ] },
+      { "type": "links", "title": "Explore the Stage", "items": [
+        { "type": "link", "label": "Playbill", "url": "https://playbill.com/" },
+        { "type": "link", "label": "Broadway shows", "url": "https://www.broadway.com/shows/tickets/" }
+      ] }
+    ], "crosslinks": [] }
+  ],
+  "sections": [
+    { "type": "feeds", "title": "Entertainment Headlines", "navLabel": "Headlines", "icon": "📰", "items": [
+      { "id": "ent-variety", "title": "Variety", "url": "https://variety.com/feed/" },
+      { "id": "ent-thr", "title": "The Hollywood Reporter", "url": "https://www.hollywoodreporter.com/feed/" },
+      { "id": "ent-indiewire", "title": "IndieWire", "url": "https://www.indiewire.com/feed/" },
+      { "id": "ent-billboard", "title": "Billboard", "url": "https://www.billboard.com/feed/" },
+      { "id": "ent-npr", "title": "NPR Pop Culture", "url": "https://feeds.npr.org/1048/rss.xml" }
+    ] },
+    { "type": "links", "title": "Tonight's Guide", "navLabel": "Guide", "icon": "📺", "items": [
+      { "type": "link", "label": "Movies in theaters", "url": "https://www.rottentomatoes.com/browse/movies_in_theaters" },
+      { "type": "link", "label": "TV listings", "url": "https://www.tvguide.com/listings/" },
+      { "type": "link", "label": "Billboard charts", "url": "https://www.billboard.com/charts/" }
+    ] },
+    { "type": "links", "title": "Entertainment Chat", "navLabel": "Chat", "icon": "💬", "items": [
+      { "type": "chat", "label": "Music Lounge", "roomName": "Music Lounge" },
+      { "type": "chat", "label": "Screen Talk", "roomName": "Screen Talk" }
+    ] }
+  ],
+  "crosslinks": [
+    { "channel": "music", "label": "Music", "icon": "🎵" },
+    { "channel": "games", "label": "Games", "icon": "🎮" },
+    { "channel": "aoltoday", "label": "AOV Today", "icon": "☀️" },
+    { "channel": "researchandlearn", "label": "Research & Learn", "icon": "📚" }
+  ]
+}

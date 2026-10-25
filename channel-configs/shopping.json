@@ -1,0 +1,56 @@
+{
+  "id": "shopping",
+  "title": "Shopping",
+  "icon": "🛍️",
+  "logo": "assets/aov-logo.png",
+  "description": "Find a bargain and talk shop. Offers may change or expire; check the seller before buying.",
+  "children": [
+    {
+      "id": "classifieds", "title": "AOV Classifieds", "icon": "📌",
+      "description": "Find community listings on an external site. AOV does not host classified ads.",
+      "children": [], "sections": [
+        { "type": "text", "title": "Community Listings", "paragraphs": [
+          "AOV does not host classified ads or manage transactions. Choose your area on Craigslist to browse listings directly on that site.",
+          "Meet safely, verify a listing before paying, and follow the external site's rules."
+        ] },
+        { "type": "links", "title": "Browse Listings", "items": [
+          { "type": "link", "label": "Choose a Craigslist location", "url": "https://www.craigslist.org/about/sites" },
+          { "type": "channel", "label": "Explore Digital Cities", "channel": "local", "path": ["digital-cities"] }
+        ] }
+      ], "crosslinks": [{ "channel": "local", "label": "Local", "icon": "🏡" }]
+    },
+    {
+      "id": "gift-certificates", "title": "Gift Certificates", "icon": "🎁",
+      "description": "A classic shopping keyword. AOV does not sell gift certificates.",
+      "children": [], "sections": [
+        { "type": "text", "title": "AOV Gift Certificates", "paragraphs": [
+          "AOV gift certificates are not available. No purchase or redemption is offered here."
+        ] },
+        { "type": "links", "title": "Browse Instead", "items": [
+          { "type": "channel", "label": "Shopping deals", "channel": "shopping" }
+        ] }
+      ], "crosslinks": []
+    },
+    {
+      "id": "tech", "title": "Tech Deals", "icon": "💻", "description": "Gadgets and gear from 9to5Toys.", "children": [],
+      "sections": [{ "type": "deal-cards", "title": "Tech Deals", "items": [{ "id": "tech-deals", "title": "9to5Toys", "url": "https://9to5toys.com/feed/" }] }],
+      "crosslinks": [{ "channel": "shopping", "label": "Shopping Home" }, { "channel": "computing", "label": "Computing" }]
+    },
+    {
+      "id": "community", "title": "Deal Talk", "icon": "💬", "description": "Community tips and discussions from Lemmy.", "children": [],
+      "sections": [
+        { "type": "feeds", "title": "Frugal Finds", "items": [{ "id": "lemmy-frugal", "title": "Lemmy Frugal", "url": "https://lemmy.world/feeds/c/frugal.xml?sort=Hot" }, { "id": "lemmy-thrifty", "title": "Lemmy Thrifty", "url": "https://lemmy.world/feeds/c/thrifty.xml?sort=Hot" }] },
+        { "type": "feeds", "title": "Game Deals", "items": [{ "id": "lemmy-gamedeals", "title": "Lemmy GameDeals", "url": "https://lemmy.world/feeds/c/gamedeals.xml?sort=Hot" }] },
+        { "type": "links", "title": "Join the Discussion", "items": [{ "type": "link", "label": "Frugal on Lemmy", "url": "https://lemmy.world/c/frugal" }, { "type": "link", "label": "Thrifty on Lemmy", "url": "https://lemmy.world/c/thrifty" }, { "type": "link", "label": "GameDeals on Lemmy", "url": "https://lemmy.world/c/gamedeals" }] }
+      ],
+      "crosslinks": [{ "channel": "shopping", "label": "Shopping Home" }, { "channel": "games", "label": "Games" }]
+    }
+  ],
+  "sections": [
+    { "type": "deal-cards", "title": "Deal of the Day", "navLabel": "Daily Deal", "icon": "⭐", "items": [{ "id": "daily-meh", "title": "Meh", "url": "https://meh.com/deals.rss" }] },
+    { "type": "deal-cards", "title": "Latest Tech Deals", "navLabel": "Latest Deals", "icon": "🛒", "items": [{ "id": "latest-tech", "title": "9to5Toys", "url": "https://9to5toys.com/feed/" }] },
+    { "type": "feeds", "title": "Deal Talk on Lemmy", "navLabel": "Deal Talk", "icon": "💬", "items": [{ "id": "latest-frugal", "title": "Lemmy Frugal", "url": "https://lemmy.world/feeds/c/frugal.xml?sort=Hot" }, { "id": "latest-thrifty", "title": "Lemmy Thrifty", "url": "https://lemmy.world/feeds/c/thrifty.xml?sort=Hot" }, { "id": "latest-game-deals", "title": "Lemmy GameDeals", "url": "https://lemmy.world/feeds/c/gamedeals.xml?sort=Hot" }] },
+    { "type": "links", "title": "Browse More", "navLabel": "More Shops", "icon": "🔗", "items": [{ "type": "link", "label": "Meh daily deals", "url": "https://meh.com/" }, { "type": "link", "label": "9to5Toys", "url": "https://9to5toys.com/" }, { "type": "link", "label": "Woot", "url": "https://www.woot.com/" }] }
+  ],
+  "crosslinks": [{ "channel": "computing", "label": "Computing", "icon": "💻" }, { "channel": "games", "label": "Games", "icon": "🕹️" }, { "channel": "personalfinance", "label": "Finance", "icon": "💰" }]
+}

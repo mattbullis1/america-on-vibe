@@ -1,0 +1,126 @@
+{
+  "id": "influence",
+  "title": "Influence",
+  "icon": "🏛️",
+  "logo": "assets/aov-logo.png",
+  "description": "Politics, media, culture, and the people shaping public life.",
+  "children": [
+    { "id": "washington", "title": "Washington", "icon": "🏛️", "description": "Federal government, Congress, and the decisions made in Washington, D.C.", "children": [], "sections": [
+      { "type": "feeds", "title": "Washington Headlines", "items": [
+        { "id": "washington-pbs", "title": "PBS News Politics", "url": "https://www.pbs.org/newshour/feeds/rss/politics" },
+        { "id": "washington-npr", "title": "NPR Politics", "url": "https://feeds.npr.org/1014/rss.xml" }
+      ] },
+      { "type": "feeds", "title": "Official Statements", "items": [
+        { "id": "washington-whitehouse", "title": "The White House", "url": "https://www.whitehouse.gov/briefings-statements/feed/" }
+      ] },
+      { "type": "links", "title": "Federal Sources", "items": [
+        { "type": "link", "label": "U.S. House of Representatives", "url": "https://www.house.gov/" },
+        { "type": "link", "label": "U.S. Senate", "url": "https://www.senate.gov/" },
+        { "type": "link", "label": "Government documents", "url": "https://www.govinfo.gov/" },
+        { "type": "link", "label": "Find elected officials", "url": "https://www.usa.gov/elected-officials" }
+      ] },
+      { "type": "links", "title": "Washington Talk", "items": [
+        { "type": "chat", "label": "Influence Talk", "roomName": "Influence Talk" }
+      ] }
+    ], "crosslinks": [
+      { "channel": "influence", "path": ["politics"], "label": "Politics", "icon": "🗳️" },
+      { "channel": "news", "label": "News", "icon": "📰" }
+    ] },
+    { "id": "issues", "title": "Issues", "icon": "📋", "description": "Explore public issues through reporting, civic resources, and related AOV channels.", "children": [
+      { "id": "elections", "title": "Elections", "icon": "🗳️", "description": "Voting, campaigns, and election rules.", "children": [], "sections": [
+        { "type": "feeds", "title": "Election Coverage", "items": [
+          { "id": "issues-elections-pbs", "title": "PBS News Politics", "url": "https://www.pbs.org/newshour/feeds/rss/politics" },
+          { "id": "issues-elections-guardian", "title": "The Guardian US Politics", "url": "https://www.theguardian.com/us-news/us-politics/rss" }
+        ] },
+        { "type": "links", "title": "Voting Resources", "items": [
+          { "type": "link", "label": "Voting and elections · USA.gov", "url": "https://www.usa.gov/voting-and-elections" },
+          { "type": "link", "label": "Find elected officials · USA.gov", "url": "https://www.usa.gov/elected-officials" }
+        ] }
+      ], "crosslinks": [
+        { "channel": "influence", "path": ["politics"], "label": "Politics", "icon": "🏛️" },
+        { "channel": "influence", "path": ["washington"], "label": "Washington", "icon": "🏛️" }
+      ] },
+      { "id": "education", "title": "Education", "icon": "📚", "description": "Schools, learning policy, and education in public life.", "children": [], "sections": [
+        { "type": "feeds", "title": "Education Coverage", "items": [
+          { "id": "issues-education-pbs", "title": "PBS News Education", "url": "https://www.pbs.org/newshour/feeds/rss/education" },
+          { "id": "issues-education-guardian", "title": "The Guardian Education", "url": "https://www.theguardian.com/education/rss" }
+        ] },
+        { "type": "links", "title": "Education Resources", "items": [
+          { "type": "link", "label": "Education information · USA.gov", "url": "https://www.usa.gov/education" }
+        ] }
+      ], "crosslinks": [
+        { "channel": "researchandlearn", "label": "Research & Learn", "icon": "🔬" },
+        { "channel": "families", "label": "Families", "icon": "👪" }
+      ] },
+      { "id": "environment", "title": "Environment", "icon": "🌿", "description": "Climate, conservation, and environmental policy.", "children": [], "sections": [
+        { "type": "feeds", "title": "Environment Coverage", "items": [
+          { "id": "issues-environment-guardian", "title": "The Guardian Environment", "url": "https://www.theguardian.com/us/environment/rss" }
+        ] },
+        { "type": "links", "title": "Environment Resources", "items": [
+          { "type": "link", "label": "U.S. Environmental Protection Agency", "url": "https://www.epa.gov/" }
+        ] }
+      ], "crosslinks": [
+        { "channel": "news", "label": "News", "icon": "📰" },
+        { "channel": "international", "label": "International", "icon": "🌍" }
+      ] }
+    ], "sections": [
+      { "type": "feeds", "title": "Issues in the News", "items": [
+        { "id": "issues-home-pbs-education", "title": "PBS News Education", "url": "https://www.pbs.org/newshour/feeds/rss/education" },
+        { "id": "issues-home-guardian-environment", "title": "The Guardian Environment", "url": "https://www.theguardian.com/us/environment/rss" },
+        { "id": "issues-home-pbs-politics", "title": "PBS News Politics", "url": "https://www.pbs.org/newshour/feeds/rss/politics" }
+      ] },
+      { "type": "links", "title": "Talk About the Issues", "items": [
+        { "type": "chat", "label": "Influence Talk", "roomName": "Influence Talk" }
+      ] }
+    ], "crosslinks": [
+      { "channel": "influence", "path": ["politics"], "label": "Politics", "icon": "🏛️" },
+      { "channel": "influence", "path": ["washington"], "label": "Washington", "icon": "🏛️" },
+      { "channel": "news", "label": "News", "icon": "📰" }
+    ] },
+    { "id": "politics", "title": "Politics", "icon": "🏛️", "description": "Elections, government, and public policy.", "children": [], "sections": [
+      { "type": "feeds", "title": "Politics & Elections", "items": [
+        { "id": "politics-pbs", "title": "PBS News Politics", "url": "https://www.pbs.org/newshour/feeds/rss/politics" },
+        { "id": "politics-npr", "title": "NPR Politics", "url": "https://feeds.npr.org/1014/rss.xml" },
+        { "id": "politics-guardian", "title": "The Guardian US Politics", "url": "https://www.theguardian.com/us-news/us-politics/rss" }
+      ] }
+    ], "crosslinks": [{ "channel": "influence", "path": ["washington"], "label": "Washington", "icon": "🏛️" }, { "channel": "influence", "path": ["issues"], "label": "Issues", "icon": "📋" }] },
+    { "id": "media", "title": "Media Watch", "icon": "📺", "description": "The press, broadcasting, and how stories reach us.", "children": [], "sections": [
+      { "type": "feeds", "title": "Media Watch", "items": [
+        { "id": "media-cjr", "title": "Columbia Journalism Review", "url": "https://www.cjr.org/feed" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "culture", "title": "Culture", "icon": "🎭", "description": "Arts, ideas, and changing social life.", "children": [], "sections": [
+      { "type": "feeds", "title": "Culture & Society", "items": [
+        { "id": "culture-pbs", "title": "PBS News Arts", "url": "https://www.pbs.org/newshour/feeds/rss/arts" },
+        { "id": "culture-guardian", "title": "The Guardian Society", "url": "https://www.theguardian.com/society/rss" }
+      ] }
+    ], "crosslinks": [] }
+  ],
+  "sections": [
+    { "type": "feeds", "title": "Politics & Public Life", "navLabel": "Politics", "icon": "🏛️", "items": [
+      { "id": "pbs-politics", "title": "PBS News Politics", "url": "https://www.pbs.org/newshour/feeds/rss/politics" },
+      { "id": "npr-politics", "title": "NPR Politics", "url": "https://feeds.npr.org/1014/rss.xml" },
+      { "id": "guardian-politics", "title": "The Guardian US Politics", "url": "https://www.theguardian.com/us-news/us-politics/rss" }
+    ] },
+    { "type": "feeds", "title": "Media Watch", "navLabel": "Media", "icon": "📺", "items": [
+      { "id": "cjr-media", "title": "Columbia Journalism Review", "url": "https://www.cjr.org/feed" }
+    ] },
+    { "type": "feeds", "title": "Culture & Society", "navLabel": "Culture", "icon": "🎭", "items": [
+      { "id": "pbs-arts", "title": "PBS News Arts", "url": "https://www.pbs.org/newshour/feeds/rss/arts" },
+      { "id": "guardian-society", "title": "The Guardian Society", "url": "https://www.theguardian.com/society/rss" }
+    ] },
+    { "type": "links", "title": "Influence Talk", "navLabel": "Chat", "icon": "💬", "items": [
+      { "type": "chat", "label": "Influence Talk", "roomName": "Influence Talk" }
+    ] },
+    { "type": "links", "title": "Civic Resources", "navLabel": "Resources", "icon": "🔗", "items": [
+      { "type": "link", "label": "Find your elected officials", "url": "https://www.usa.gov/elected-officials" },
+      { "type": "link", "label": "Election information", "url": "https://www.usa.gov/voting" },
+      { "type": "link", "label": "Congressional legislation", "url": "https://www.congress.gov/" }
+    ] }
+  ],
+  "crosslinks": [
+    { "channel": "news", "label": "News", "icon": "📰" },
+    { "channel": "international", "label": "International", "icon": "🌍" },
+    { "channel": "entertainment", "label": "Entertainment", "icon": "🎬" }
+  ]
+}

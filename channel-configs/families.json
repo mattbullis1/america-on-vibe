@@ -1,0 +1,341 @@
+{
+  "id": "families",
+  "title": "Families",
+  "icon": "👨‍👩‍👧",
+  "logo": "assets/aov-logo.png",
+  "description": "Stories, activities, and resources for families and caregivers.",
+  "children": [
+    {
+      "id": "parenting",
+      "title": "Parenting",
+      "icon": "👪",
+      "description": "Stories and practical ideas for parents and caregivers.",
+      "children": [],
+      "sections": [
+        {
+          "type": "feeds",
+          "title": "Parenting Stories",
+          "items": [
+            {
+              "id": "families-parenting-mother",
+              "title": "Motherly",
+              "url": "https://www.mother.ly/feed/"
+            },
+            {
+              "id": "families-parenting-guardian",
+              "title": "The Guardian Family",
+              "url": "https://www.theguardian.com/lifeandstyle/family/rss"
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "title": "Parenting Resources",
+          "items": [
+            {
+              "type": "link",
+              "label": "PBS KIDS for Parents",
+              "url": "https://www.pbs.org/parents/"
+            },
+            {
+              "type": "link",
+              "label": "HealthyChildren.org",
+              "url": "https://www.healthychildren.org/English/Pages/default.aspx"
+            }
+          ]
+        }
+      ],
+      "crosslinks": []
+    },
+    {
+      "id": "family-activities",
+      "title": "Family Activities",
+      "icon": "🎨",
+      "description": "Things to do, make, read, and explore together.",
+      "children": [],
+      "sections": [
+        {
+          "type": "feeds",
+          "title": "Things to Do",
+          "items": [
+            {
+              "id": "families-activities-parentmap",
+              "title": "ParentMap",
+              "url": "https://www.parentmap.com/feed"
+            },
+            {
+              "id": "families-activities-brightly",
+              "title": "Brightly",
+              "url": "https://www.readbrightly.com/feed/"
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "title": "Find Activities",
+          "items": [
+            {
+              "type": "link",
+              "label": "PBS KIDS activities",
+              "url": "https://www.pbs.org/parents/simple-science-activities"
+            },
+            {
+              "type": "link",
+              "label": "National Park Service: Kids",
+              "url": "https://www.nps.gov/kids/"
+            },
+            {
+              "type": "link",
+              "label": "ParentMap things to do",
+              "url": "https://www.parentmap.com/things-to-do"
+            }
+          ]
+        }
+      ],
+      "crosslinks": [
+        {
+          "channel": "travel",
+          "label": "Travel",
+          "icon": "✈️"
+        }
+      ]
+    },
+    {
+      "id": "school-learning",
+      "title": "School & Learning",
+      "icon": "🎒",
+      "description": "Education news and ways to support learning at home.",
+      "children": [],
+      "sections": [
+        {
+          "type": "feeds",
+          "title": "School & Learning Headlines",
+          "items": [
+            {
+              "id": "families-school-pbs",
+              "title": "PBS NewsHour Education",
+              "url": "https://www.pbs.org/newshour/feeds/rss/education"
+            },
+            {
+              "id": "families-school-guardian",
+              "title": "The Guardian Family",
+              "url": "https://www.theguardian.com/lifeandstyle/family/rss"
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "title": "Learning Resources",
+          "items": [
+            {
+              "type": "link",
+              "label": "PBS KIDS for Parents: Learn",
+              "url": "https://www.pbs.org/parents/learn-grow"
+            },
+            {
+              "type": "link",
+              "label": "Reading Rockets for parents",
+              "url": "https://www.pbs.org/parents/learn-grow"
+            }
+          ]
+        }
+      ],
+      "crosslinks": [
+        {
+          "channel": "researchandlearn",
+          "label": "Research & Learn",
+          "icon": "🔎"
+        }
+      ]
+    },
+    {
+      "id": "family-life",
+      "title": "Family Life",
+      "icon": "🏡",
+      "description": "Everyday family stories and connection across generations.",
+      "children": [],
+      "sections": [
+        {
+          "type": "feeds",
+          "title": "Family Life Stories",
+          "items": [
+            {
+              "id": "families-life-mother",
+              "title": "Motherly",
+              "url": "https://www.mother.ly/feed/"
+            },
+            {
+              "id": "families-life-guardian",
+              "title": "The Guardian Family",
+              "url": "https://www.theguardian.com/lifeandstyle/family/rss"
+            },
+            {
+              "id": "families-life-parentmap",
+              "title": "ParentMap",
+              "url": "https://www.parentmap.com/feed"
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "title": "Family Life Resources",
+          "items": [
+            {
+              "type": "link",
+              "label": "PBS KIDS for Parents: Thrive",
+              "url": "https://www.pbs.org/parents/thrive"
+            },
+            {
+              "type": "link",
+              "label": "Common Sense Media family guides",
+              "url": "https://www.commonsensemedia.org/articles"
+            }
+          ]
+        }
+      ],
+      "crosslinks": [
+        {
+          "channel": "lifestyles",
+          "label": "Lifestyles",
+          "icon": "✨"
+        }
+      ]
+    },
+    {
+      "id": "books-reading",
+      "title": "Books & Reading",
+      "icon": "📚",
+      "description": "Reading inspiration for families and children.",
+      "children": [],
+      "sections": [
+        {
+          "type": "feeds",
+          "title": "Reading Ideas",
+          "items": [
+            {
+              "id": "families-books-brightly",
+              "title": "Brightly",
+              "url": "https://www.readbrightly.com/feed/"
+            },
+            {
+              "id": "families-books-parentmap",
+              "title": "ParentMap",
+              "url": "https://www.parentmap.com/feed"
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "title": "Reading Resources",
+          "items": [
+            {
+              "type": "link",
+              "label": "Reading Rockets",
+              "url": "https://www.pbs.org/parents/read"
+            },
+            {
+              "type": "link",
+              "label": "Brightly reading lists",
+              "url": "https://www.readbrightly.com/"
+            }
+          ]
+        }
+      ],
+      "crosslinks": [
+        {
+          "channel": "kidsonly",
+          "label": "Kids Only",
+          "icon": "🌟"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "type": "feeds",
+      "title": "Families Today",
+      "items": [
+        {
+          "id": "families-mother-mother",
+          "title": "Motherly",
+          "url": "https://www.mother.ly/feed/"
+        },
+        {
+          "id": "families-guardian-guardian",
+          "title": "The Guardian Family",
+          "url": "https://www.theguardian.com/lifeandstyle/family/rss"
+        },
+        {
+          "id": "families-pbs-pbs",
+          "title": "PBS NewsHour Education",
+          "url": "https://www.pbs.org/newshour/feeds/rss/education"
+        },
+        {
+          "id": "families-brightly-brightly",
+          "title": "Brightly",
+          "url": "https://www.readbrightly.com/feed/"
+        },
+        {
+          "id": "families-parentmap-parentmap",
+          "title": "ParentMap",
+          "url": "https://www.parentmap.com/feed"
+        }
+      ],
+      "navLabel": "Headlines",
+      "icon": "📰"
+    },
+    {
+      "type": "links",
+      "title": "Family Resources",
+      "items": [
+        {
+          "type": "link",
+          "label": "PBS KIDS for Parents",
+          "url": "https://www.pbs.org/parents/"
+        },
+        {
+          "type": "link",
+          "label": "Reading Rockets",
+          "url": "https://www.pbs.org/parents/read"
+        },
+        {
+          "type": "link",
+          "label": "National Park Service: Kids",
+          "url": "https://www.nps.gov/kids/"
+        }
+      ],
+      "navLabel": "Resources",
+      "icon": "📚"
+    },
+    {
+      "type": "links",
+      "title": "Family Chat",
+      "navLabel": "Chat",
+      "icon": "💬",
+      "items": [
+        {
+          "type": "chat",
+          "label": "Family Circle",
+          "roomName": "Family Circle"
+        }
+      ]
+    }
+  ],
+  "crosslinks": [
+    {
+      "channel": "health",
+      "label": "Health",
+      "icon": "🩺"
+    },
+    {
+      "channel": "kidsonly",
+      "label": "Kids Only",
+      "icon": "🌟"
+    },
+    {
+      "channel": "lifestyles",
+      "label": "Lifestyles",
+      "icon": "✨"
+    }
+  ]
+}

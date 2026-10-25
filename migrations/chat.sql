@@ -1,0 +1,45 @@
+-- AOV Phase 1D chat schema adapted from Frug/AJAX-Chat (Modified MIT).
+-- Import into a dedicated MariaDB database with phpMyAdmin or a local client.
+
+CREATE TABLE IF NOT EXISTS ajax_chat_online (
+	userID INT(10) UNSIGNED NOT NULL,
+	userName VARCHAR(64) NOT NULL,
+	userRole INT(1) NOT NULL,
+	channel INT(10) UNSIGNED NOT NULL,
+	dateTime DATETIME NOT NULL,
+	ip VARBINARY(16) NOT NULL,
+	PRIMARY KEY (userID),
+	INDEX (userName)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE IF NOT EXISTS ajax_chat_messages (
+	id INT(11) NOT NULL AUTO_INCREMENT,
+	userID INT(10) UNSIGNED NOT NULL,
+	userName VARCHAR(64) NOT NULL,
+	userRole INT(1) NOT NULL,
+	channel INT(10) UNSIGNED NOT NULL,
+	dateTime DATETIME NOT NULL,
+	ip VARBINARY(16) NOT NULL,
+	text TEXT,
+	PRIMARY KEY (id),
+	INDEX message_condition (id, channel, dateTime),
+	INDEX (dateTime)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE IF NOT EXISTS ajax_chat_bans (
+	userID INT(10) UNSIGNED NOT NULL,
+	userName VARCHAR(64) NOT NULL,
+	dateTime DATETIME NOT NULL,
+	ip VARBINARY(16) NOT NULL,
+	PRIMARY KEY (userID),
+	INDEX (userName),
+	INDEX (dateTime)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE IF NOT EXISTS ajax_chat_invitations (
+	userID INT(10) UNSIGNED NOT NULL,
+	channel INT(10) UNSIGNED NOT NULL,
+	dateTime DATETIME NOT NULL,
+	PRIMARY KEY (userID, channel),
+	INDEX (dateTime)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;

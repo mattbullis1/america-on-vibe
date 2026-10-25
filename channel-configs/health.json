@@ -1,0 +1,108 @@
+{
+  "id": "health",
+  "title": "Health",
+  "icon": "🩺",
+  "logo": "assets/aov-logo.png",
+  "description": "Health headlines, trusted information, and a place to talk.",
+  "children": [
+    { "id": "public-health", "title": "Public Health", "icon": "🌐", "description": "Community and public health updates.", "children": [], "sections": [
+      { "type": "feeds", "title": "Public Health Headlines", "items": [
+        { "id": "health-public-pbs", "title": "PBS NewsHour Health", "url": "https://www.pbs.org/newshour/feeds/rss/health" },
+        { "id": "health-public-guardian", "title": "The Guardian Health", "url": "https://www.theguardian.com/society/health/rss" }
+      ] },
+      { "type": "links", "title": "Public Health Resources", "items": [
+        { "type": "link", "label": "CDC health topics", "url": "https://www.cdc.gov/health-topics.html" },
+        { "type": "link", "label": "WHO health topics", "url": "https://www.who.int/health-topics" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "prevention", "title": "Prevention", "icon": "🛡️", "description": "Prevention and healthy habits.", "children": [], "sections": [
+      { "type": "feeds", "title": "Prevention Updates", "items": [
+        { "id": "health-prevention-medline", "title": "MedlinePlus", "url": "https://medlineplus.gov/feeds/whatsnew.xml" },
+        { "id": "health-prevention-npr", "title": "NPR Health", "url": "https://feeds.npr.org/1128/rss.xml" }
+      ] },
+      { "type": "links", "title": "Prevention Resources", "items": [
+        { "type": "link", "label": "MedlinePlus healthy living", "url": "https://medlineplus.gov/healthyliving.html" },
+        { "type": "link", "label": "NIH wellness toolkits", "url": "https://www.nih.gov/health-information/your-healthiest-self-wellness-toolkits" }
+      ] }
+    ], "crosslinks": [{ "channel": "lifestyles", "label": "Lifestyles", "icon": "✨" }] },
+    { "id": "conditions-care", "title": "Conditions & Care", "icon": "📋", "description": "Explore conditions and care with established references.", "children": [], "sections": [
+      { "type": "feeds", "title": "Conditions & Care Updates", "items": [
+        { "id": "health-conditions-medline", "title": "MedlinePlus", "url": "https://medlineplus.gov/groupfeeds/new.xml" },
+        { "id": "health-conditions-npr", "title": "NPR Health", "url": "https://feeds.npr.org/1128/rss.xml" }
+      ] },
+      { "type": "links", "title": "Find Health Information", "items": [
+        { "type": "link", "label": "MedlinePlus health topics", "url": "https://medlineplus.gov/healthtopics.html" },
+        { "type": "link", "label": "ClinicalTrials.gov", "url": "https://clinicaltrials.gov/" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "mental-health", "title": "Mental Health", "icon": "💚", "description": "Mental health news and established resources.", "children": [], "sections": [
+      { "type": "feeds", "title": "Mental Health in the News", "items": [
+        { "id": "health-mental-npr", "title": "NPR Health", "url": "https://feeds.npr.org/1128/rss.xml" },
+        { "id": "health-mental-guardian", "title": "The Guardian Health", "url": "https://www.theguardian.com/society/health/rss" }
+      ] },
+      { "type": "links", "title": "Mental Health Resources", "items": [
+        { "type": "link", "label": "NIMH mental health information", "url": "https://www.nimh.nih.gov/health" },
+        { "type": "link", "label": "MedlinePlus mental health", "url": "https://medlineplus.gov/mentalhealth.html" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "nutrition", "title": "Nutrition", "icon": "🥗", "description": "Food and nutrition stories, everyday meal ideas, and reliable reference links.", "children": [], "sections": [
+      { "type": "feeds", "title": "Nutrition in the News", "items": [
+        { "id": "nutrition-guardian", "title": "The Guardian Nutrition", "url": "https://www.theguardian.com/lifeandstyle/nutrition/rss" }
+      ] },
+      { "type": "feeds", "title": "Food & Cooking", "items": [
+        { "id": "nutrition-food-guardian", "title": "The Guardian Food", "url": "https://www.theguardian.com/food/rss" }
+      ] },
+      { "type": "links", "title": "Nutrition Resources", "items": [
+        { "type": "link", "label": "Nutrition topics · MedlinePlus", "url": "https://medlineplus.gov/nutrition.html" },
+        { "type": "link", "label": "Food labels · Nutrition.gov", "url": "https://www.nutrition.gov/topics/shopping-cooking-and-meal-planning/food-labels" },
+        { "type": "link", "label": "Understand the Nutrition Facts label · FDA", "url": "https://www.fda.gov/food/nutrition-facts-label/how-understand-and-use-nutrition-facts-label" },
+        { "type": "link", "label": "Recipes · Nutrition.gov", "url": "https://www.nutrition.gov/recipes" }
+      ] },
+      { "type": "links", "title": "Health Talk", "items": [
+        { "type": "chat", "label": "Health Talk", "roomName": "Health Talk" }
+      ] }
+    ], "crosslinks": [
+      { "channel": "lifestyles", "path": ["fitness"], "label": "Fitness", "icon": "🏋️" },
+      { "channel": "families", "label": "Families", "icon": "👨‍👩‍👧" },
+      { "channel": "health", "path": ["prevention"], "label": "Prevention", "icon": "🛡️" }
+    ] },
+    { "id": "health-research", "title": "Health Research", "icon": "🔬", "description": "Research reporting and primary research resources.", "children": [], "sections": [
+      { "type": "feeds", "title": "Health Research Headlines", "items": [
+        { "id": "health-research-sciencedaily", "title": "ScienceDaily Health", "url": "https://www.sciencedaily.com/rss/top/health.xml" },
+        { "id": "health-research-medline", "title": "MedlinePlus", "url": "https://medlineplus.gov/feeds/whatsnew.xml" }
+      ] },
+      { "type": "links", "title": "Research Resources", "items": [
+        { "type": "link", "label": "NIH News in Health", "url": "https://newsinhealth.nih.gov/" },
+        { "type": "link", "label": "PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/" }
+      ] }
+    ], "crosslinks": [{ "channel": "researchandlearn", "label": "Research & Learn", "icon": "🔎" }] }
+  ],
+  "sections": [
+    {
+      "type": "feeds",
+      "title": "Health Headlines",
+      "navLabel": "Headlines",
+      "icon": "📰",
+      "items": [
+        { "id": "health-medline", "title": "MedlinePlus", "url": "https://medlineplus.gov/feeds/whatsnew.xml" },
+        { "id": "health-npr", "title": "NPR Health", "url": "https://feeds.npr.org/1128/rss.xml" },
+        { "id": "health-pbs", "title": "PBS NewsHour Health", "url": "https://www.pbs.org/newshour/feeds/rss/health" },
+        { "id": "health-guardian", "title": "The Guardian Health", "url": "https://www.theguardian.com/society/health/rss" },
+        { "id": "health-sciencedaily", "title": "ScienceDaily Health", "url": "https://www.sciencedaily.com/rss/top/health.xml" }
+      ]
+    },
+    { "type": "links", "title": "Health Resources", "navLabel": "Resources", "icon": "📚", "items": [
+      { "type": "link", "label": "MedlinePlus health topics", "url": "https://medlineplus.gov/healthtopics.html" },
+      { "type": "link", "label": "NIH News in Health", "url": "https://newsinhealth.nih.gov/" },
+      { "type": "link", "label": "CDC health topics", "url": "https://www.cdc.gov/health-topics.html" }
+    ] },
+    { "type": "links", "title": "Health Chat", "navLabel": "Chat", "icon": "💬", "items": [
+      { "type": "chat", "label": "Health Talk", "roomName": "Health Talk" }
+    ] }
+  ],
+  "crosslinks": [
+    { "channel": "lifestyles", "label": "Lifestyles", "icon": "✨" },
+    { "channel": "families", "label": "Families", "icon": "👨‍👩‍👧" },
+    { "channel": "researchandlearn", "label": "Research & Learn", "icon": "🔎" }
+  ]
+}

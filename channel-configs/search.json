@@ -1,0 +1,19 @@
+{
+  "id": "search",
+  "title": "Search",
+  "description": "Explore Search on AOV.",
+  "children": [],
+  "sections": [
+    {
+      "type": "links",
+      "title": "Web destinations",
+      "items": [
+        {
+          "type": "destination",
+          "label": "Visit Search news"
+        }
+      ]
+    }
+  ],
+  "crosslinks": []
+}

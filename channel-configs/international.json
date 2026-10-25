@@ -1,0 +1,78 @@
+{
+  "id": "international",
+  "title": "International",
+  "icon": "🌍",
+  "logo": "assets/aov-logo.png",
+  "description": "Stories and conversations from around the world.",
+  "children": [
+    { "id": "canada", "title": "Canada", "icon": "🍁", "description": "Canadian headlines, places, and conversation.", "children": [], "sections": [
+      { "type": "feeds", "title": "Canada Headlines", "items": [
+        { "id": "canada-cbc", "title": "CBC News Canada", "url": "https://www.cbc.ca/webfeed/rss/rss-canada" },
+        { "id": "canada-global", "title": "Global News Canada", "url": "https://globalnews.ca/canada/feed/" },
+        { "id": "canada-guardian", "title": "The Guardian Canada", "url": "https://www.theguardian.com/world/canada/rss" }
+      ] },
+      { "type": "links", "title": "Explore Canada", "items": [
+        { "type": "link", "label": "CBC Canada", "url": "https://www.cbc.ca/news/canada" },
+        { "type": "link", "label": "Global News Canada", "url": "https://globalnews.ca/canada/" },
+        { "type": "link", "label": "Parks Canada", "url": "https://parks.canada.ca/" }
+      ] },
+      { "type": "links", "title": "Canada Talk", "items": [
+        { "type": "chat", "label": "International Talk", "roomName": "International Talk" }
+      ] }
+    ], "crosslinks": [
+      { "channel": "international", "label": "International Home", "icon": "🌍" },
+      { "channel": "travel", "label": "Travel", "icon": "✈️" }
+    ] },
+    { "id": "europe", "title": "Europe", "icon": "🏰", "description": "European headlines and public life.", "children": [], "sections": [
+      { "type": "feeds", "title": "Europe", "items": [
+        { "id": "europe-bbc", "title": "BBC Europe", "url": "https://feeds.bbci.co.uk/news/world/europe/rss.xml" },
+        { "id": "europe-guardian", "title": "The Guardian Europe", "url": "https://www.theguardian.com/world/europe-news/rss" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "africa", "title": "Africa", "icon": "🌍", "description": "News from across the African continent.", "children": [], "sections": [
+      { "type": "feeds", "title": "Africa", "items": [
+        { "id": "africa-bbc", "title": "BBC Africa", "url": "https://feeds.bbci.co.uk/news/world/africa/rss.xml" },
+        { "id": "africa-guardian", "title": "The Guardian Africa", "url": "https://www.theguardian.com/world/africa/rss" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "asia-pacific", "title": "Asia Pacific", "icon": "🌏", "description": "Headlines from Asia and the Pacific.", "children": [], "sections": [
+      { "type": "feeds", "title": "Asia Pacific", "items": [
+        { "id": "asia-bbc", "title": "BBC Asia", "url": "https://feeds.bbci.co.uk/news/world/asia/rss.xml" },
+        { "id": "asia-guardian", "title": "The Guardian Asia Pacific", "url": "https://www.theguardian.com/world/asia-pacific/rss" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "middle-east", "title": "Middle East", "icon": "🧭", "description": "Reporting from the Middle East.", "children": [], "sections": [
+      { "type": "feeds", "title": "Middle East", "items": [
+        { "id": "mideast-bbc", "title": "BBC Middle East", "url": "https://feeds.bbci.co.uk/news/world/middle_east/rss.xml" },
+        { "id": "mideast-guardian", "title": "The Guardian Middle East", "url": "https://www.theguardian.com/world/middleeast/rss" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "americas", "title": "Americas", "icon": "🌎", "description": "Stories across North, Central, and South America.", "children": [], "sections": [
+      { "type": "feeds", "title": "Americas", "items": [
+        { "id": "americas-bbc", "title": "BBC Latin America", "url": "https://feeds.bbci.co.uk/news/world/latin_america/rss.xml" },
+        { "id": "americas-guardian", "title": "The Guardian Americas", "url": "https://www.theguardian.com/world/americas/rss" }
+      ] }
+    ], "crosslinks": [] }
+  ],
+  "sections": [
+    { "type": "feeds", "title": "Around the World", "navLabel": "World News", "icon": "📰", "items": [
+      { "id": "bbc-world", "title": "BBC World", "url": "https://feeds.bbci.co.uk/news/world/rss.xml" },
+      { "id": "pbs-world", "title": "PBS News World", "url": "https://www.pbs.org/newshour/feeds/rss/world" },
+      { "id": "npr-world", "title": "NPR World", "url": "https://feeds.npr.org/1004/rss.xml" },
+      { "id": "guardian-world", "title": "The Guardian World", "url": "https://www.theguardian.com/world/rss" },
+      { "id": "lemonde-world", "title": "Le Monde in English", "url": "https://www.lemonde.fr/en/international/rss_full.xml" },
+      { "id": "aljazeera-world", "title": "Al Jazeera English", "url": "https://www.aljazeera.com/xml/rss/all.xml" }
+    ] },
+    { "type": "links", "title": "International Talk", "navLabel": "Chat", "icon": "💬", "items": [
+      { "type": "chat", "label": "International Talk", "roomName": "International Talk" }
+    ] },
+    { "type": "feeds", "title": "World Discussion", "navLabel": "Community", "icon": "👥", "items": [
+      { "id": "lemmy-worldnews", "title": "Lemmy World News", "url": "https://lemmy.world/feeds/c/worldnews.xml?sort=Hot" }
+    ] }
+  ],
+  "crosslinks": [
+    { "channel": "news", "label": "News", "icon": "📰" },
+    { "channel": "travel", "label": "Travel", "icon": "✈️" },
+    { "channel": "influence", "label": "Influence", "icon": "🏛️" }
+  ]
+}

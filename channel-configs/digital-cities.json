@@ -1,0 +1,48 @@
+{
+  "groups": [
+    {"id":"northeast","title":"Northeast","icon":"🏙️","cities":[
+      {"id":"albany","title":"Albany","city":"Albany","region":"New York","country":"US","latitude":42.65258,"longitude":-73.75623},
+      {"id":"boston","title":"Boston","city":"Boston","region":"Massachusetts","country":"US","latitude":42.35843,"longitude":-71.05977},
+      {"id":"buffalo","title":"Buffalo","city":"Buffalo","region":"New York","country":"US","latitude":42.88645,"longitude":-78.87837},
+      {"id":"new-bedford","title":"New Bedford","city":"New Bedford","region":"Massachusetts","country":"US","latitude":41.63526,"longitude":-70.92701},
+      {"id":"philadelphia","title":"Philadelphia","city":"Philadelphia","region":"Pennsylvania","country":"US","latitude":39.95238,"longitude":-75.16362}
+    ]},
+    {"id":"south","title":"South","icon":"☀️","cities":[
+      {"id":"atlanta","title":"Atlanta","city":"Atlanta","region":"Georgia","country":"US","latitude":33.749,"longitude":-84.38798},
+      {"id":"austin","title":"Austin","city":"Austin","region":"Texas","country":"US","latitude":30.26715,"longitude":-97.74306},
+      {"id":"dallas","title":"Dallas–Fort Worth","city":"Dallas","region":"Texas","country":"US","latitude":32.78306,"longitude":-96.80667},
+      {"id":"dc","title":"Washington, DC","city":"Washington","region":"District of Columbia","country":"US","latitude":38.89511,"longitude":-77.03637},
+      {"id":"el-paso","title":"El Paso","city":"El Paso","region":"Texas","country":"US","latitude":31.75872,"longitude":-106.48693},
+      {"id":"houston","title":"Houston","city":"Houston","region":"Texas","country":"US","latitude":29.76328,"longitude":-95.36327},
+      {"id":"miami","title":"Miami–Fort Lauderdale","city":"Miami","region":"Florida","country":"US","latitude":25.77427,"longitude":-80.19366},
+      {"id":"naples","title":"Fort Myers–Naples","city":"Naples","region":"Florida","country":"US","latitude":26.14234,"longitude":-81.79596},
+      {"id":"new-orleans","title":"New Orleans","city":"New Orleans","region":"Louisiana","country":"US","latitude":29.95465,"longitude":-90.07507},
+      {"id":"norfolk","title":"Norfolk–Newport News","city":"Norfolk","region":"Virginia","country":"US","latitude":36.84681,"longitude":-76.28522},
+      {"id":"temple","title":"Waco–Temple–Bryan","city":"Temple","region":"Texas","country":"US","latitude":31.09823,"longitude":-97.34278},
+      {"id":"tulsa","title":"Tulsa","city":"Tulsa","region":"Oklahoma","country":"US","latitude":36.15398,"longitude":-95.99277}
+    ]},
+    {"id":"midwest","title":"Midwest","icon":"🌽","cities":[
+      {"id":"bay-city","title":"Bay City","city":"Bay City","region":"Michigan","country":"US","latitude":43.59447,"longitude":-83.88886},
+      {"id":"dayton","title":"Dayton","city":"Dayton","region":"Ohio","country":"US","latitude":39.75895,"longitude":-84.19161},
+      {"id":"detroit","title":"Detroit","city":"Detroit","region":"Michigan","country":"US","latitude":42.33143,"longitude":-83.04575},
+      {"id":"flint","title":"Flint","city":"Flint","region":"Michigan","country":"US","latitude":43.01253,"longitude":-83.68746},
+      {"id":"minneapolis","title":"Minneapolis–St. Paul","city":"Minneapolis","region":"Minnesota","country":"US","latitude":44.97997,"longitude":-93.26384},
+      {"id":"saginaw","title":"Saginaw","city":"Saginaw","region":"Michigan","country":"US","latitude":43.41947,"longitude":-83.95081}
+    ]},
+    {"id":"west","title":"West","icon":"🏔️","cities":[
+      {"id":"alaska","title":"Alaska (Anchorage)","city":"Anchorage","region":"Alaska","country":"US","latitude":61.21806,"longitude":-149.90028},
+      {"id":"albuquerque","title":"Albuquerque–Santa Fe","city":"Albuquerque","region":"New Mexico","country":"US","latitude":35.08449,"longitude":-106.65114},
+      {"id":"denver","title":"Denver","city":"Denver","region":"Colorado","country":"US","latitude":39.73915,"longitude":-104.9847},
+      {"id":"eugene","title":"Eugene","city":"Eugene","region":"Oregon","country":"US","latitude":44.05207,"longitude":-123.08675},
+      {"id":"los-angeles","title":"Los Angeles","city":"Los Angeles","region":"California","country":"US","latitude":34.05223,"longitude":-118.24368},
+      {"id":"reno","title":"Reno","city":"Reno","region":"Nevada","country":"US","latitude":39.52963,"longitude":-119.8138},
+      {"id":"san-diego","title":"San Diego","city":"San Diego","region":"California","country":"US","latitude":32.71571,"longitude":-117.16472},
+      {"id":"san-francisco","title":"San Francisco","city":"San Francisco","region":"California","country":"US","latitude":37.77493,"longitude":-122.41942},
+      {"id":"seattle","title":"Seattle–Tacoma","city":"Seattle","region":"Washington","country":"US","latitude":47.60621,"longitude":-122.33207},
+      {"id":"visalia","title":"Fresno–Visalia","city":"Visalia","region":"California","country":"US","latitude":36.33023,"longitude":-119.29206}
+    ]},
+    {"id":"canada","title":"Canada","icon":"🍁","cities":[
+      {"id":"toronto","title":"Toronto","city":"Toronto","region":"Ontario","country":"CA","latitude":43.70643,"longitude":-79.39864}
+    ]}
+  ]
+}

@@ -1,0 +1,5 @@
+DirectoryIndex index.php
+Options -Indexes
+<FilesMatch "^(view\.tpl|bootstrap\.php|browser\.php|bulletins\.php|channel-feed-images\.php|retention\.php|chat-moderation\.php|config\.example\.php|composer\.(json|lock)|README\.md|DECISIONS\.md)$">
+    Require all denied
+</FilesMatch>

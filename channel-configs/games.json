@@ -1,0 +1,15 @@
+{
+  "id": "games",
+  "title": "Games",
+  "icon": "🕹️",
+  "logo": "assets/aov-logo.png",
+  "description": "Discover free browser games from independent creators.",
+  "children": [
+    {"id":"new","title":"New Games","icon":"✨","description":"Recently added free games that play in a web browser.","children":[],"sections":[{"type":"game-cards","title":"New Browser Games","navLabel":"New Games","icon":"✨","items":[{"id":"games-new","title":"New on itch.io","url":"https://itch.io/games/newest/free/platform-web.xml"}]}],"crosslinks":[]}
+  ],
+  "sections": [
+    {"type":"game-cards","title":"Games to Explore","navLabel":"Discover","icon":"🎮","items":[{"id":"games-free","title":"Top Free Web Games","url":"https://itch.io/games/free/platform-web.xml"}]},
+    {"type":"links","title":"More Games","navLabel":"More Games","icon":"🧭","items":[{"type":"link","label":"Browse free web games on itch.io","url":"https://itch.io/games/free/platform-web"}]}
+  ],
+  "crosslinks": []
+}

@@ -1,0 +1,93 @@
+{
+  "id": "researchandlearn",
+  "title": "Research & Learn",
+  "icon": "📚",
+  "logo": "assets/aov-logo.png",
+  "description": "Follow a question, explore trusted collections, and learn something new.",
+  "children": [
+    { "id": "science", "title": "Science", "icon": "🔬", "description": "Research, discoveries, and the ideas behind them.", "children": [], "sections": [
+      { "type": "feeds", "title": "Science Discoveries", "items": [
+        { "id": "science-smithsonian", "title": "Smithsonian Magazine Science", "url": "https://www.smithsonianmag.com/rss/science-nature/" },
+        { "id": "science-sciencedaily", "title": "ScienceDaily", "url": "https://www.sciencedaily.com/rss/top/science.xml" },
+        { "id": "science-nasa", "title": "NASA", "url": "https://www.nasa.gov/feed/" }
+      ] },
+      { "type": "links", "title": "Explore Science", "items": [
+        { "type": "link", "label": "NASA learning resources", "url": "https://science.nasa.gov/learn/" },
+        { "type": "link", "label": "Smithsonian Learning Lab", "url": "https://learninglab.si.edu/" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "history", "title": "History", "icon": "🏛️", "description": "Explore the past through stories and original records.", "children": [], "sections": [
+      { "type": "feeds", "title": "History Stories", "items": [
+        { "id": "history-smithsonian", "title": "Smithsonian Magazine History", "url": "https://www.smithsonianmag.com/rss/history/" },
+        { "id": "history-loc", "title": "Library of Congress Blog", "url": "https://blogs.loc.gov/loc/feed/" }
+      ] },
+      { "type": "links", "title": "Original Sources", "items": [
+        { "type": "link", "label": "Library of Congress collections", "url": "https://www.loc.gov/collections/" },
+        { "type": "link", "label": "Smithsonian collections", "url": "https://www.si.edu/collections" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "arts-culture", "title": "Arts & Culture", "icon": "🎨", "description": "Art, ideas, and creative work across time.", "children": [], "sections": [
+      { "type": "feeds", "title": "Arts & Culture", "items": [
+        { "id": "arts-smithsonian", "title": "Smithsonian Magazine Arts & Culture", "url": "https://www.smithsonianmag.com/rss/arts-culture/" },
+        { "id": "arts-jstor", "title": "JSTOR Daily", "url": "https://daily.jstor.org/feed/" }
+      ] },
+      { "type": "links", "title": "Explore Art", "items": [
+        { "type": "link", "label": "Smithsonian Open Access", "url": "https://www.si.edu/openaccess" },
+        { "type": "link", "label": "Smithsonian Learning Lab", "url": "https://learninglab.si.edu/" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "nature", "title": "Nature", "icon": "🌿", "description": "Wildlife, Earth, and the natural world.", "children": [], "sections": [
+      { "type": "feeds", "title": "Nature Discoveries", "items": [
+        { "id": "nature-smithsonian", "title": "Smithsonian Magazine Science & Nature", "url": "https://www.smithsonianmag.com/rss/science-nature/" },
+        { "id": "nature-sciencedaily", "title": "ScienceDaily", "url": "https://www.sciencedaily.com/rss/top/environment.xml" }
+      ] },
+      { "type": "links", "title": "Explore Nature", "items": [
+        { "type": "link", "label": "Smithsonian Natural History", "url": "https://naturalhistory.si.edu/" },
+        { "type": "link", "label": "NASA Earth Observatory", "url": "https://earthobservatory.nasa.gov/" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "research-desk", "title": "Research Desk", "icon": "🔎", "description": "Find original documents, museum objects, and reliable reference material.", "children": [], "sections": [
+      { "type": "links", "title": "Research Collections", "items": [
+        { "type": "link", "label": "Library of Congress collections", "url": "https://www.loc.gov/collections/" },
+        { "type": "link", "label": "Smithsonian Learning Lab", "url": "https://learninglab.si.edu/" },
+        { "type": "link", "label": "Smithsonian Open Access", "url": "https://www.si.edu/openaccess" },
+        { "type": "link", "label": "NASA Science", "url": "https://science.nasa.gov/" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "learn-something", "title": "Learn Something", "icon": "📖", "description": "Free courses, textbooks, and activities for curious minds.", "children": [], "sections": [
+      { "type": "links", "title": "Free Learning", "items": [
+        { "type": "link", "label": "OpenStax textbooks", "url": "https://openstax.org/higher-education" },
+        { "type": "link", "label": "MIT OpenCourseWare", "url": "https://ocw.mit.edu/" },
+        { "type": "link", "label": "NASA learning resources", "url": "https://science.nasa.gov/learn/" },
+        { "type": "link", "label": "Smithsonian Learning Lab", "url": "https://learninglab.si.edu/" }
+      ] }
+    ], "crosslinks": [] }
+  ],
+  "sections": [
+    { "type": "feeds", "title": "Discoveries & Ideas", "navLabel": "Discover", "icon": "✨", "items": [
+      { "id": "discover-smithsonian-science", "title": "Smithsonian Magazine Science", "url": "https://www.smithsonianmag.com/rss/science-nature/" },
+      { "id": "discover-smithsonian-history", "title": "Smithsonian Magazine History", "url": "https://www.smithsonianmag.com/rss/history/" },
+      { "id": "discover-sciencedaily", "title": "ScienceDaily", "url": "https://www.sciencedaily.com/rss/top/science.xml" },
+      { "id": "discover-jstor", "title": "JSTOR Daily", "url": "https://daily.jstor.org/feed/" },
+      { "id": "discover-loc", "title": "Library of Congress Blog", "url": "https://blogs.loc.gov/loc/feed/" },
+      { "id": "discover-nasa", "title": "NASA", "url": "https://www.nasa.gov/feed/" }
+    ] },
+    { "type": "links", "title": "Research Desk", "navLabel": "Research", "icon": "🔎", "items": [
+      { "type": "link", "label": "Library of Congress collections", "url": "https://www.loc.gov/collections/" },
+      { "type": "link", "label": "Smithsonian Learning Lab", "url": "https://learninglab.si.edu/" }
+    ] },
+    { "type": "links", "title": "Learn Something", "navLabel": "Learn", "icon": "📖", "items": [
+      { "type": "link", "label": "OpenStax textbooks", "url": "https://openstax.org/higher-education" },
+      { "type": "link", "label": "MIT OpenCourseWare", "url": "https://ocw.mit.edu/" },
+      { "type": "link", "label": "NASA learning resources", "url": "https://science.nasa.gov/learn/" }
+    ] },
+    { "type": "links", "title": "Study Hall", "navLabel": "Chat", "icon": "💬", "items": [
+      { "type": "chat", "label": "Study Hall", "roomName": "Study Hall" }
+    ] }
+  ],
+  "crosslinks": [
+    { "channel": "computing", "label": "Computing", "icon": "💻" },
+    { "channel": "news", "label": "News", "icon": "📰" },
+    { "channel": "workplace", "label": "WorkPlace", "icon": "💼" }
+  ]
+}

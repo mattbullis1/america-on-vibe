@@ -1,0 +1,109 @@
+{
+  "id": "news",
+  "title": "News",
+  "icon": "🏠",
+  "logo": "assets/news-channel-logo.png",
+  "description": "Headlines from independent publishers, conversation, and community posts.",
+  "children": [
+    {
+      "id": "weird-news",
+      "title": "Weird News",
+      "icon": "🛸",
+      "description": "Strange-but-true headlines and curious happenings.",
+      "children": [],
+      "sections": [
+        { "type": "feeds", "title": "Strange Headlines", "items": [
+          { "id": "weird-upi", "title": "UPI Odd News", "url": "https://rss.upi.com/news/odd_news.rss" },
+          { "id": "weird-sky", "title": "Sky News Strange", "url": "https://feeds.skynews.com/feeds/rss/strange.xml" }
+        ] },
+        { "type": "links", "title": "More Oddities", "items": [
+          { "type": "link", "label": "UPI Odd News", "url": "https://www.upi.com/Odd_News/" }
+        ] }
+      ],
+      "crosslinks": [
+        { "channel": "aoltoday", "path": ["laughs"], "label": "Today · Laughs", "icon": "😄" },
+        { "channel": "news", "label": "News Home", "icon": "📰" }
+      ]
+    },
+    {
+      "id": "news-desk-sample",
+      "title": "News Desk",
+      "icon": "🗞️",
+      "description": "A preview of how a News subchannel can work.",
+      "children": [
+        {
+          "id": "community-sample",
+          "title": "Community",
+          "icon": "🏘️",
+          "description": "A preview of a sub-subchannel. Replace this with an item from your list.",
+          "children": [],
+          "sections": [
+            {
+              "type": "samples",
+              "title": "Community story layout · Samples",
+              "items": [
+                { "label": "Sample: Neighbors organize a park cleanup", "summary": "This example card shows where a community story, RSS source, or forum post could appear." }
+              ]
+            }
+          ],
+          "crosslinks": [{ "channel": "news", "label": "News home" }]
+        }
+      ],
+      "sections": [
+        {
+          "type": "samples",
+          "title": "News Desk layout · Samples",
+          "items": [
+            { "label": "Sample: A new community library opens", "summary": "This sample story demonstrates a headline and summary inside a subchannel." }
+          ]
+        }
+      ],
+      "crosslinks": [{ "channel": "news", "label": "News home" }]
+    }
+  ],
+  "sections": [
+    {
+      "type": "feeds",
+      "title": "In the News",
+      "icon": "📰",
+      "items": [
+        { "id": "npr", "title": "NPR National", "url": "https://feeds.npr.org/1003/rss.xml" },
+        { "id": "pbs", "title": "PBS News Nation", "url": "https://www.pbs.org/newshour/feeds/rss/nation" },
+        { "id": "abc", "title": "ABC News U.S.", "url": "https://abcnews.com/abcnews/usheadlines" },
+        { "id": "cbs", "title": "CBS News U.S.", "url": "https://www.cbsnews.com/latest/rss/us" },
+        { "id": "guardian", "title": "The Guardian U.S.", "url": "https://www.theguardian.com/us-news/rss" }
+      ]
+    },
+    {
+      "type": "bulletins",
+      "title": "On AOV",
+      "navLabel": "On AOV",
+      "icon": "⭐",
+      "items": []
+    },
+    {
+      "type": "links",
+      "title": "News Resources",
+      "navLabel": "Resources",
+      "icon": "🔗",
+      "items": [
+        { "type": "chat", "label": "Time Square", "room": 0 },
+        { "type": "link", "label": "AOV news reader", "url": "https://americaonvibe.com/channels/news/" }
+      ]
+    },
+    {
+      "type": "feeds",
+      "title": "Community Chat",
+      "navLabel": "Community",
+      "icon": "👥",
+      "items": [
+        { "id": "lemmy-news", "title": "Lemmy News", "url": "https://lemmy.world/feeds/c/news.xml?sort=Hot" }
+      ]
+    }
+  ],
+  "crosslinks": [
+    { "channel": "sports", "label": "Sports", "icon": "🏈" },
+    { "channel": "international", "label": "International", "icon": "🌍" },
+    { "channel": "personalfinance", "label": "Finance", "icon": "💰" }
+  ]
+}

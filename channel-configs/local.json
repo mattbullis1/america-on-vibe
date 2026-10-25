@@ -1,0 +1,18 @@
+{
+  "id": "local",
+  "title": "Local",
+  "icon": "🏡",
+  "logo": "assets/aov-logo.png",
+  "description": "Your town, your weather, and useful places nearby.",
+  "children": [
+    {"id":"headlines","title":"Local News","icon":"📰","description":"Recent headlines near your saved ZIP code.","children":[],"sections":[{"type":"local","mode":"news","title":"Around Your Area","navLabel":"Headlines","icon":"📰"},{"type":"links","title":"More Local News","items":[{"type":"link","label":"NPR local stations","url":"https://www.npr.org/stations/"},{"type":"link","label":"PBS station finder","url":"https://www.pbs.org/about/about-pbs/stations/"}]}],"crosslinks":[]},
+    {"id":"weather","title":"Weather","icon":"🌤️","description":"Current conditions and detailed forecasts for your area.","children":[],"sections":[{"type":"local","mode":"weather","title":"Your Forecast","navLabel":"Forecast","icon":"🌤️"}],"crosslinks":[]},
+    {"id":"places","title":"Around Town","icon":"📍","description":"Search for useful places near your ZIP code.","children":[],"sections":[{"type":"local","mode":"places","title":"Find Nearby","navLabel":"Nearby","icon":"📍","items":[{"label":"Libraries","query":"public libraries"},{"label":"Parks and trails","query":"parks and trails"},{"label":"Grocery stores","query":"grocery stores"},{"label":"Restaurants","query":"restaurants"},{"label":"Post offices","query":"post offices"},{"label":"Pharmacies","query":"pharmacies"},{"label":"Hospitals and urgent care","query":"hospitals and urgent care"},{"label":"Town and county offices","query":"town and county offices"}]}],"crosslinks":[]},
+    {"id":"resources","title":"Community Resources","icon":"🏛️","description":"Find local services and official information.","children":[],"sections":[{"type":"local","mode":"resources","title":"Local Resources","navLabel":"Resources","icon":"🏛️"},{"type":"links","title":"National Directories","items":[{"type":"link","label":"Find local government","url":"https://www.usa.gov/local-governments"},{"type":"link","label":"Find a public library","url":"https://www.imls.gov/search-compare/"},{"type":"link","label":"Find assistance through 211","url":"https://www.211.org/"}]}],"crosslinks":[]}
+  ],
+  "sections": [
+    {"type":"local","mode":"home","title":"Your Local Area","navLabel":"Around You","icon":"🏡","items":[{"label":"Libraries","query":"public libraries"},{"label":"Parks","query":"parks"},{"label":"Groceries","query":"grocery stores"},{"label":"Town offices","query":"town offices"}]},
+    {"type":"links","title":"Explore Local","navLabel":"Explore","icon":"🧭","items":[{"type":"channel","label":"News from all sources","channel":"news"},{"type":"channel","label":"Travel ideas","channel":"travel"}]}
+  ],
+  "crosslinks": [{"channel":"news","label":"News","icon":"📰"},{"channel":"travel","label":"Travel","icon":"🧳"}]
+}

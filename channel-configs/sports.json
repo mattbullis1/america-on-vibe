@@ -1,0 +1,207 @@
+{
+  "id": "sports",
+  "title": "Sports",
+  "icon": "🏆",
+  "logo": "assets/aov-logo.png",
+  "description": "Your games, your teams, and the latest sports headlines.",
+  "children": [
+    {
+      "id": "auto-racing", "title": "Auto Racing", "icon": "🏎️", "description": "Motorsports headlines and race schedules.", "children": [],
+      "sections": [
+        { "type": "feeds", "title": "Racing Headlines", "items": [
+          { "id": "racing-espn", "title": "ESPN Racing", "url": "https://www.espn.com/espn/rss/rpm/news" },
+          { "id": "racing-bbc-f1", "title": "BBC Sport Formula 1", "url": "https://feeds.bbci.co.uk/sport/formula1/rss.xml" },
+          { "id": "racing-guardian", "title": "The Guardian Motorsports", "url": "https://www.theguardian.com/sport/motorsports/rss" }
+        ] },
+        { "type": "links", "title": "Race Centers", "items": [
+          { "type": "link", "label": "NASCAR", "url": "https://www.nascar.com/" },
+          { "type": "link", "label": "ESPN Racing", "url": "https://www.espn.com/racing/" }
+        ] },
+        { "type": "links", "title": "Racing Talk", "items": [{ "type": "chat", "label": "Sports Talk", "roomName": "Sports Talk" }] }
+      ], "crosslinks": [{ "channel": "sports", "label": "Sports Home", "icon": "🏆" }]
+    },
+    {
+      "id": "running", "title": "Running", "icon": "🏃", "description": "Running, races, and track and field.", "children": [],
+      "sections": [
+        { "type": "feeds", "title": "Running Headlines", "items": [
+          { "id": "running-bbc", "title": "BBC Sport Athletics", "url": "https://feeds.bbci.co.uk/sport/athletics/rss.xml" },
+          { "id": "running-guardian", "title": "The Guardian Athletics", "url": "https://www.theguardian.com/sport/athletics/rss" },
+          { "id": "running-runnersworld", "title": "Runner's World", "url": "https://www.runnersworld.com/rss/default.xml" }
+        ] },
+        { "type": "links", "title": "Running Resources", "items": [
+          { "type": "link", "label": "World Athletics", "url": "https://worldathletics.org/" },
+          { "type": "link", "label": "Runner's World", "url": "https://www.runnersworld.com/" }
+        ] },
+        { "type": "links", "title": "Running Talk", "items": [{ "type": "chat", "label": "Sports Talk", "roomName": "Sports Talk" }] }
+      ], "crosslinks": [
+        { "channel": "sports", "label": "Sports Home", "icon": "🏆" },
+        { "channel": "lifestyles", "path": ["fitness"], "label": "Fitness", "icon": "🏋️" }
+      ]
+    },
+    {
+      "id": "boardsailing", "title": "Boardsailing", "icon": "🏄", "description": "Windsurfing and boardsailing news, events, and organizations.", "children": [],
+      "sections": [
+        { "type": "links", "title": "On the Water", "items": [
+          { "type": "link", "label": "World Sailing", "url": "https://www.sailing.org/" },
+          { "type": "link", "label": "iQFOiL Class", "url": "https://iqfoilclassofficial.org/" },
+          { "type": "link", "label": "US Sailing", "url": "https://www.ussailing.org/" }
+        ] },
+        { "type": "links", "title": "Boardsailing Talk", "items": [{ "type": "chat", "label": "Sports Talk", "roomName": "Sports Talk" }] }
+      ], "crosslinks": [{ "channel": "sports", "label": "Sports Home", "icon": "🏆" }]
+    },
+    {
+      "id": "boxing-mma", "title": "Boxing & MMA", "icon": "🥊", "description": "Combat sports headlines and events.", "children": [],
+      "sections": [
+        { "type": "feeds", "title": "Fight Headlines", "items": [
+          { "id": "boxing-espn", "title": "ESPN Boxing", "url": "https://www.espn.com/espn/rss/boxing/news" },
+          { "id": "mma-espn", "title": "ESPN MMA", "url": "https://www.espn.com/espn/rss/mma/news" },
+          { "id": "boxing-guardian", "title": "The Guardian Boxing", "url": "https://www.theguardian.com/sport/boxing/rss" }
+        ] },
+        { "type": "links", "title": "Fight Centers", "items": [
+          { "type": "link", "label": "ESPN Boxing", "url": "https://www.espn.com/boxing/" },
+          { "type": "link", "label": "ESPN MMA", "url": "https://www.espn.com/mma/" }
+        ] },
+        { "type": "links", "title": "Fight Talk", "items": [{ "type": "chat", "label": "Sports Talk", "roomName": "Sports Talk" }] }
+      ], "crosslinks": [{ "channel": "sports", "label": "Sports Home", "icon": "🏆" }]
+    },
+    {
+      "id": "high-school", "title": "High School Sports", "icon": "🎒", "description": "School sports news and ways to follow local teams.", "children": [],
+      "sections": [
+        { "type": "links", "title": "Follow School Sports", "items": [
+          { "type": "link", "label": "MaxPreps", "url": "https://www.maxpreps.com/" },
+          { "type": "link", "label": "NFHS High School Today", "url": "https://nfhs.org/resources/high-school-today" }
+        ] }
+      ], "crosslinks": [
+        { "channel": "sports", "label": "Sports Home", "icon": "🏆" },
+        { "channel": "local", "label": "Local", "icon": "📍" }
+      ]
+    },
+    {
+      "id": "tennis", "title": "Tennis", "icon": "🎾", "description": "Tennis headlines, match scores, and conversation.", "children": [],
+      "sections": [
+        { "type": "feeds", "title": "Tennis Headlines", "items": [
+          { "id": "tennis-espn", "title": "ESPN Tennis", "url": "https://www.espn.com/espn/rss/tennis/news" },
+          { "id": "tennis-bbc", "title": "BBC Sport Tennis", "url": "https://feeds.bbci.co.uk/sport/tennis/rss.xml" },
+          { "id": "tennis-guardian", "title": "The Guardian Tennis", "url": "https://www.theguardian.com/sport/tennis/rss" }
+        ] },
+        { "type": "links", "title": "Scores & Tours", "items": [
+          { "type": "link", "label": "Tennis scoreboard", "url": "https://www.espn.com/tennis/scoreboard" },
+          { "type": "link", "label": "WTA scores", "url": "https://www.wtatennis.com/scores" }
+        ] },
+        { "type": "links", "title": "Tennis Talk", "items": [
+          { "type": "chat", "label": "Sports Talk", "roomName": "Sports Talk" }
+        ] }
+      ],
+      "crosslinks": [
+        { "channel": "sports", "label": "Sports Home", "icon": "🏆" }
+      ]
+    },
+    {
+      "id": "golf", "title": "Golf", "icon": "⛳", "description": "Golf headlines, tournament scores, and conversation.", "children": [],
+      "sections": [
+        { "type": "feeds", "title": "Golf Headlines", "items": [
+          { "id": "golf-espn", "title": "ESPN Golf", "url": "https://www.espn.com/espn/rss/golf/news" },
+          { "id": "golf-bbc", "title": "BBC Sport Golf", "url": "https://feeds.bbci.co.uk/sport/golf/rss.xml" },
+          { "id": "golf-guardian", "title": "The Guardian Golf", "url": "https://www.theguardian.com/sport/golf/rss" }
+        ] },
+        { "type": "links", "title": "Scores & Tours", "items": [
+          { "type": "link", "label": "PGA Tour leaderboard", "url": "https://www.pgatour.com/leaderboard" },
+          { "type": "link", "label": "LPGA tournaments", "url": "https://www.lpga.com/tournaments" }
+        ] },
+        { "type": "links", "title": "Golf Talk", "items": [
+          { "type": "chat", "label": "Sports Talk", "roomName": "Sports Talk" }
+        ] }
+      ],
+      "crosslinks": [
+        { "channel": "sports", "label": "Sports Home", "icon": "🏆" }
+      ]
+    },
+    {
+      "id": "nfl", "title": "NFL", "icon": "🏈", "description": "Football headlines and scores.", "children": [],
+      "sections": [
+        { "type": "feeds", "title": "NFL Headlines", "items": [{ "id": "nfl-espn", "title": "ESPN NFL", "url": "https://www.espn.com/espn/rss/nfl/news" }] },
+        { "type": "links", "title": "NFL Scores", "items": [{ "type": "link", "label": "NFL scores and schedule", "url": "https://www.nfl.com/scores/" }] }
+      ], "crosslinks": []
+    },
+    {
+      "id": "college", "title": "College", "icon": "🎓", "description": "College football headlines and scores.", "children": [],
+      "sections": [
+        { "type": "feeds", "title": "College Football", "items": [{ "id": "college-cbs", "title": "CBS Sports College Football", "url": "https://www.cbssports.com/rss/headlines/college-football" }] },
+        { "type": "links", "title": "College Scores", "items": [{ "type": "link", "label": "NCAA football scoreboard", "url": "https://www.ncaa.com/scoreboard/football/fbs" }] }
+      ], "crosslinks": []
+    },
+    {
+      "id": "mlb", "title": "MLB", "icon": "⚾", "description": "Baseball headlines and scores.", "children": [],
+      "sections": [
+        { "type": "feeds", "title": "MLB Headlines", "items": [{ "id": "mlb-espn", "title": "ESPN MLB", "url": "https://www.espn.com/espn/rss/mlb/news" }] },
+        { "type": "links", "title": "MLB Scores", "items": [{ "type": "link", "label": "MLB scores and schedule", "url": "https://www.mlb.com/scores" }] }
+      ], "crosslinks": []
+    },
+    {
+      "id": "nba", "title": "NBA", "icon": "🏀", "description": "Basketball headlines and scores.", "children": [],
+      "sections": [
+        { "type": "feeds", "title": "NBA Headlines", "items": [{ "id": "nba-espn", "title": "ESPN NBA", "url": "https://www.espn.com/espn/rss/nba/news" }] },
+        { "type": "links", "title": "NBA Scores", "items": [{ "type": "link", "label": "NBA scores and schedule", "url": "https://www.nba.com/games" }] }
+      ], "crosslinks": []
+    },
+    {
+      "id": "nhl", "title": "NHL", "icon": "🏒", "description": "Hockey headlines and scores.", "children": [],
+      "sections": [
+        { "type": "feeds", "title": "NHL Headlines", "items": [{ "id": "nhl-espn", "title": "ESPN NHL", "url": "https://www.espn.com/espn/rss/nhl/news" }] },
+        { "type": "links", "title": "NHL Scores", "items": [{ "type": "link", "label": "NHL scores and schedule", "url": "https://www.nhl.com/scores" }] }
+      ], "crosslinks": []
+    },
+    {
+      "id": "soccer", "title": "Soccer", "icon": "⚽", "description": "Soccer headlines and scores.", "children": [],
+      "sections": [
+        { "type": "feeds", "title": "Soccer Headlines", "items": [{ "id": "soccer-cbs", "title": "CBS Sports Soccer", "url": "https://www.cbssports.com/rss/headlines/soccer" }] },
+        { "type": "links", "title": "Soccer Scores", "items": [{ "type": "link", "label": "FIFA match centre", "url": "https://www.fifa.com/match-centre" }] }
+      ], "crosslinks": []
+    }
+  ],
+  "sections": [
+    {
+      "type": "feeds", "title": "Latest Sports News", "navLabel": "Headlines", "icon": "📰",
+      "items": [
+        { "id": "cbs-sports", "title": "CBS Sports", "url": "https://www.cbssports.com/rss/headlines/" },
+        { "id": "espn-sports", "title": "ESPN", "url": "https://www.espn.com/espn/rss/news" },
+        { "id": "guardian-sport", "title": "The Guardian Sport", "url": "https://www.theguardian.com/sport/rss" },
+        { "id": "npr-sports", "title": "NPR Sports", "url": "https://feeds.npr.org/1055/rss.xml" }
+      ]
+    },
+    {
+      "type": "links", "title": "Scores & Schedules", "navLabel": "Scores", "icon": "📊",
+      "items": [
+        { "type": "link", "label": "NFL scores", "url": "https://www.nfl.com/scores/" },
+        { "type": "link", "label": "MLB scores", "url": "https://www.mlb.com/scores" },
+        { "type": "link", "label": "NBA games", "url": "https://www.nba.com/games" },
+        { "type": "link", "label": "NHL scores", "url": "https://www.nhl.com/scores" },
+        { "type": "link", "label": "NCAA football", "url": "https://www.ncaa.com/scoreboard/football/fbs" }
+      ]
+    },
+    {
+      "type": "links", "title": "More Sports", "navLabel": "More Sports", "icon": "🏅",
+      "items": [
+        { "type": "channel", "label": "Auto racing", "channel": "sports", "path": ["auto-racing"] },
+        { "type": "channel", "label": "Tennis", "channel": "sports", "path": ["tennis"] },
+        { "type": "channel", "label": "Golf", "channel": "sports", "path": ["golf"] },
+        { "type": "channel", "label": "Running", "channel": "sports", "path": ["running"] },
+        { "type": "channel", "label": "Boardsailing", "channel": "sports", "path": ["boardsailing"] },
+        { "type": "channel", "label": "Boxing and MMA", "channel": "sports", "path": ["boxing-mma"] },
+        { "type": "channel", "label": "High school sports", "channel": "sports", "path": ["high-school"] }
+      ]
+    },
+    {
+      "type": "links", "title": "Sports Talk", "navLabel": "Sports Talk", "icon": "💬",
+      "items": [{ "type": "chat", "label": "Sports Talk", "roomName": "Sports Talk" }]
+    },
+    {
+      "type": "feeds", "title": "Fan Discussion", "navLabel": "Fans", "icon": "👥",
+      "items": [{ "id": "lemmy-sports", "title": "Lemmy Sports", "url": "https://lemmy.world/feeds/c/sports.xml?sort=Hot" }]
+    }
+  ],
+  "crosslinks": [
+    { "channel": "news", "label": "News", "icon": "📰" },
+    { "channel": "local", "label": "Local", "icon": "📍" }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "people",
+  "title": "People Connection",
+  "icon": "👥",
+  "logo": "assets/aov-logo.png",
+  "description": "Find familiar screen names and join conversations across AOV.",
+  "children": [
+    {
+      "id": "love", "title": "Love@AOV", "icon": "💌",
+      "description": "A look back at a classic keyword idea. AOV does not operate a dating service.",
+      "children": [],
+      "sections": [
+        { "type": "text", "title": "Love@AOV", "paragraphs": [
+          "The Love@AOV keyword is part of the nostalgia directory. There is no AOV dating site, matchmaking, or dating profile system.",
+          "You can still use the regular Buddy List and chat rooms to connect with other members. Please respect other members' boundaries and use blocking or reporting when needed."
+        ] },
+        { "type": "links", "title": "Meet People", "items": [
+          { "type": "window", "label": "Open Buddy List", "window": "buddies" },
+          { "type": "window", "label": "Open Chat Rooms", "window": "chat" }
+        ] }
+      ],
+      "crosslinks": []
+    }
+  ],
+  "sections": [
+    { "type": "text", "title": "People on AOV", "paragraphs": [
+      "Chat rooms are public conversations. The Buddy List helps you keep up with screen names you know, while instant messages are one-to-one."
+    ] },
+    { "type": "links", "title": "Connect", "items": [
+      { "type": "window", "label": "Open Chat Rooms", "window": "chat" },
+      { "type": "window", "label": "Open Buddy List", "window": "buddies" },
+      { "type": "channel", "label": "Visit Love@AOV", "channel": "people", "path": ["love"] }
+    ] }
+  ],
+  "crosslinks": [{ "channel": "aoltoday", "label": "AOV Today", "icon": "☀️" }]
+}

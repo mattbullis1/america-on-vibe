@@ -1,0 +1,9 @@
+{
+  "id": "kidsonly",
+  "title": "Kids Only",
+  "description": "A static look back at a colorful corner of the 1990s internet.",
+  "staticImage": "assets/kids-only-static.webp",
+  "children": [],
+  "sections": [],
+  "crosslinks": []
+}

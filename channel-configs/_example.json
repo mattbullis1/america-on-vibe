@@ -1,0 +1,38 @@
+{
+  "id": "example",
+  "title": "Example Channel",
+  "description": "Copy the structure into an existing channel JSON file.",
+  "children": [
+    {
+      "id": "subchannel",
+      "title": "Subchannel",
+      "description": "A topic inside the main channel.",
+      "children": [
+        {
+          "id": "sub-subchannel",
+          "title": "Sub-subchannel",
+          "description": "A narrower topic.",
+          "children": [],
+          "sections": [
+            {
+              "type": "links",
+              "title": "Useful links",
+              "items": [
+                { "type": "link", "label": "Example website", "url": "https://example.org/" },
+                { "type": "chat", "label": "Town Square chat", "room": 0 },
+                { "type": "channel", "label": "Sports channel", "channel": "sports" }
+              ]
+            }
+          ],
+          "crosslinks": [
+            { "channel": "news", "label": "Back to News" }
+          ]
+        }
+      ],
+      "sections": [],
+      "crosslinks": []
+    }
+  ],
+  "sections": [],
+  "crosslinks": []
+}

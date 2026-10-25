@@ -1,0 +1,109 @@
+{
+  "id": "aoltoday",
+  "title": "Today",
+  "icon": "☀️",
+  "logo": "assets/aov-logo.png",
+  "description": "Good news, gentle laughs, and a friendly place to unwind.",
+  "children": [
+    {
+      "id": "preview", "title": "AOV Preview", "icon": "✨",
+      "description": "A look at the independent America On Vibe nostalgia project.", "children": [],
+      "sections": [
+        { "type": "text", "title": "About AOV", "paragraphs": [
+          "America On Vibe recreates the feel of a late-1990s online service with channels, chat rooms, buddies, internal mail, and a small browser.",
+          "This is an independent, noncommercial nostalgia and open-source project. It is not affiliated with AOL. Features and outside links may change while the service is developed."
+        ] },
+        { "type": "links", "title": "Explore AOV", "items": [
+          { "type": "channel", "label": "Take the AOV tour", "channel": "aoltoday", "path": ["tour"] },
+          { "type": "channel", "label": "Open News", "channel": "news" },
+          { "type": "window", "label": "Open chat rooms", "window": "chat" }
+        ] }
+      ], "crosslinks": [{ "channel": "news", "label": "News", "icon": "📰" }]
+    },
+    {
+      "id": "tour", "title": "AOV Tour", "icon": "🧭",
+      "description": "A short guided walk through the service.", "children": [],
+      "sections": [
+        { "type": "text", "title": "Start Exploring", "paragraphs": [
+          "Open a channel to browse current stories and community posts. Use the keyword box to jump straight to a topic, or enter a web address for a 1990s Wayback view.",
+          "Chat rooms, your Buddy List, and internal mail are separate parts of AOV. Outside sites may open in a regular browser tab when they block embedded viewing."
+        ] },
+        { "type": "links", "title": "Tour Stops", "items": [
+          { "type": "channel", "label": "AOV Today", "channel": "aoltoday" },
+          { "type": "channel", "label": "News", "channel": "news" },
+          { "type": "channel", "label": "Digital Cities", "channel": "local", "path": ["digital-cities"] },
+          { "type": "window", "label": "Chat Rooms", "window": "chat" },
+          { "type": "window", "label": "Buddy List", "window": "buddies" }
+        ] }
+      ], "crosslinks": [{ "channel": "local", "label": "Local", "icon": "🏡" }]
+    },
+    {
+      "id": "good-news", "title": "Good News", "icon": "🌞", "description": "Uplifting stories from positive-news publishers.", "children": [],
+      "sections": [
+        { "type": "feeds", "title": "Good News", "items": [
+          { "id": "inspiring", "title": "Good News Network Inspiring", "url": "https://www.goodnewsnetwork.org/category/news/inspiring/feed/" },
+          { "id": "positive-good", "title": "Positive News", "url": "https://www.positive.news/feed/" },
+          { "id": "optimist-good", "title": "The Optimist Daily", "url": "https://www.optimistdaily.com/feed/" }
+        ] }
+      ], "crosslinks": []
+    },
+    {
+      "id": "laughs", "title": "Laughs", "icon": "😄", "description": "Lighthearted, offbeat stories.", "children": [],
+      "sections": [
+        { "type": "feeds", "title": "Funny News", "items": [
+          { "id": "laughs-feed", "title": "Good News Network Laughs", "url": "https://www.goodnewsnetwork.org/category/news/good-news/laughs/feed/" }
+        ] }
+      ], "crosslinks": [{ "channel": "news", "path": ["weird-news"], "label": "Weird News", "icon": "🛸" }]
+    },
+    {
+      "id": "cute-kind", "title": "Cute & Kind", "icon": "🐾", "description": "Animals, kindness, and everyday smiles.", "children": [],
+      "sections": [
+        { "type": "feeds", "title": "Animal Stories", "items": [
+          { "id": "animals-feed", "title": "Good News Network Animals", "url": "https://www.goodnewsnetwork.org/category/news/animals/feed/" }
+        ] },
+        { "type": "feeds", "title": "Cute Community Posts", "items": [
+          { "id": "aww-feed", "title": "Lemmy aww", "url": "https://lemmy.world/feeds/c/aww.xml?sort=Hot" }
+        ] }
+      ], "crosslinks": []
+    }
+  ],
+  "sections": [
+    {
+      "type": "feeds", "title": "Good News", "navLabel": "Good News", "icon": "🌞",
+      "items": [
+        { "id": "gnn-inspiring", "title": "Good News Network Inspiring", "url": "https://www.goodnewsnetwork.org/category/news/inspiring/feed/" },
+        { "id": "positive-news", "title": "Positive News", "url": "https://www.positive.news/feed/" },
+        { "id": "optimist-daily", "title": "The Optimist Daily", "url": "https://www.optimistdaily.com/feed/" }
+      ]
+    },
+    {
+      "type": "feeds", "title": "Funny News", "navLabel": "Funny News", "icon": "😄",
+      "items": [
+        { "id": "gnn-laughs", "title": "Good News Network Laughs", "url": "https://www.goodnewsnetwork.org/category/news/good-news/laughs/feed/" }
+      ]
+    },
+    {
+      "type": "links", "title": "Funny Chat", "navLabel": "Funny Chat", "icon": "💬",
+      "items": [{ "type": "chat", "label": "Laugh Lounge", "roomName": "Laugh Lounge" }]
+    },
+    {
+      "type": "feeds", "title": "Feel-Good Forums", "navLabel": "Forums", "icon": "👥",
+      "items": [
+        { "id": "lemmy-wholesome", "title": "Lemmy Be Wholesome", "url": "https://lemmy.world/feeds/c/lemmybewholesome.xml?sort=Hot" },
+        { "id": "lemmy-aww", "title": "Lemmy aww", "url": "https://lemmy.world/feeds/c/aww.xml?sort=Hot" }
+      ]
+    },
+    {
+      "type": "links", "title": "Community Pages", "navLabel": "Communities", "icon": "🔗",
+      "items": [
+        { "type": "link", "label": "Lemmy Be Wholesome", "url": "https://lemmy.world/c/lemmybewholesome" },
+        { "type": "link", "label": "Lemmy aww", "url": "https://lemmy.world/c/aww" }
+      ]
+    }
+  ],
+  "crosslinks": [
+    { "channel": "news", "label": "News", "icon": "📰" },
+    { "channel": "lifestyles", "label": "Lifestyles", "icon": "🏡" },
+    { "channel": "entertainment", "label": "Entertainment", "icon": "🎭" }
+  ]
+}

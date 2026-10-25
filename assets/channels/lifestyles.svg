@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="324" height="64" viewBox="0 0 324 64" role="img" aria-label="Lifestyles">
+<defs>
+  <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#c5badc"/><stop offset=".48" stop-color="#584b72"/><stop offset="1" stop-color="#101b40"/></linearGradient>
+  <linearGradient id="shine" x2="0" y2="1"><stop stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#fff" opacity=".28"/></pattern>
+  <filter id="shadow"><feDropShadow dx="1" dy="2" stdDeviation="1" flood-color="#071126" flood-opacity=".85"/></filter>
+</defs>
+<rect x="1" y="1" width="322" height="62" rx="2" fill="#0a1230" stroke="#0a132b" stroke-width="2"/>
+<rect x="5" y="5" width="314" height="54" fill="url(#sky)" stroke="#e9f6ff" stroke-width="2"/>
+<rect x="7" y="7" width="310" height="25" fill="url(#shine)" opacity=".75"/>
+<rect x="7" y="7" width="310" height="50" fill="url(#dots)"/>
+<path d="M196 54 C229 18 270 12 314 16" fill="none" stroke="#fff" stroke-opacity=".36" stroke-width="2"/>
+<path d="M213 56 C244 32 278 26 315 29" fill="none" stroke="#ffe38b" stroke-opacity=".48" stroke-width="3"/>
+<circle cx="273" cy="31" r="25" fill="#fff" opacity=".08"/><circle cx="273" cy="31" r="16" fill="#fff" opacity=".1"/>
+<text x="273" y="45" text-anchor="middle" font-family="Trebuchet MS,Arial,sans-serif" font-size="32" font-weight="bold" fill="#fff" opacity=".8">❖</text>
+<text x="23" y="43" font-family="Trebuchet MS,Arial,sans-serif" font-size="39" font-weight="bold" font-style="italic" letter-spacing="-.8" fill="#fff" stroke="#122044" stroke-width="2.6" paint-order="stroke" filter="url(#shadow)">Lifestyles</text>
+<path d="M8 55 H316" stroke="#fff" stroke-opacity=".45"/>
+</svg>

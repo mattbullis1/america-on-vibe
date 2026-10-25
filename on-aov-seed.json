@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": "welcome-to-aov",
+      "title": "Welcome to America On Vibe",
+      "date": "2026-10-23",
+      "summary": "AOV brings back the feel of a 1990s online service.",
+      "body": "America On Vibe (AOV) is an independent nostalgia project inspired by online services of the 1990s. It is being developed for noncommercial use. Explore the channels, read current headlines, and watch the classic interface grow as more sections are added.",
+      "image": "assets/aov-logo.png",
+      "status": "published"
+    },
+    {
+      "id": "news-from-multiple-sources",
+      "title": "News from multiple sources",
+      "date": "2026-10-23",
+      "summary": "The News channel gathers current headlines from five publishers.",
+      "body": "In the News combines headlines from NPR, PBS NewsHour, ABC News, CBS News, and The Guardian. Stories are sorted by publication time, and each title names its source. Community posts from Lemmy appear separately. Publishers control whether their full articles can appear inside AOV's mini browser.",
+      "image": "assets/news-channel-logo.png",
+      "status": "published"
+    },
+    {
+      "id": "members-and-conversation",
+      "title": "Members and conversation",
+      "date": "2026-10-23",
+      "summary": "Screen names, internal mail, chat rooms, and buddies are part of AOV.",
+      "body": "AOV members use screen names and can send internal mail within the service. Chat rooms, instant messages, and the buddy list are available as the service develops. Password-recovery email is separate from internal mail. Use Report a Bug at the top of AOV to tell us when something does not work as expected.",
+      "image": "",
+      "status": "published"
+    }
+  ]
+}

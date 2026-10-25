@@ -1,0 +1,74 @@
+{
+  "id": "personalfinance",
+  "title": "Personal Finance",
+  "icon": "💰",
+  "logo": "assets/aov-logo.png",
+  "description": "Your money: spending, saving, credit, taxes, and investing basics.",
+  "children": [
+    { "id": "everyday-money", "title": "Everyday Money", "icon": "🧾", "description": "Spending, budgeting, and prices that affect a household.", "children": [], "sections": [
+      { "type": "feeds", "title": "Everyday Money", "items": [
+        { "id": "everyday-nerdwallet", "title": "NerdWallet", "url": "https://www.nerdwallet.com/blog/feed/" },
+        { "id": "everyday-cnbc", "title": "CNBC Personal Finance", "url": "https://www.cnbc.com/id/21324812/device/rss/rss.html" }
+      ] },
+      { "type": "links", "title": "Money Basics", "items": [
+        { "type": "link", "label": "CFPB consumer tools", "url": "https://www.consumerfinance.gov/consumer-tools/" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "credit-debt", "title": "Credit & Debt", "icon": "💳", "description": "Understand credit reports, borrowing, and repayment.", "children": [], "sections": [
+      { "type": "feeds", "title": "Consumer Watch", "items": [
+        { "id": "credit-cfpb", "title": "Consumer Financial Protection Bureau", "url": "https://www.consumerfinance.gov/about-us/newsroom/feed/" }
+      ] },
+      { "type": "links", "title": "Credit Resources", "items": [
+        { "type": "link", "label": "Credit reports and scores", "url": "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/" },
+        { "type": "link", "label": "Get a credit report", "url": "https://www.usa.gov/credit-reports" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "saving-retirement", "title": "Saving & Retirement", "icon": "🐷", "description": "Build savings and plan for later years.", "children": [], "sections": [
+      { "type": "feeds", "title": "Saving & Retirement", "items": [
+        { "id": "saving-guardian", "title": "The Guardian Money", "url": "https://www.theguardian.com/us/money/rss" }
+      ] },
+      { "type": "links", "title": "Planning Tools", "items": [
+        { "type": "link", "label": "CFPB retirement tools", "url": "https://www.consumerfinance.gov/consumer-tools/retirement/" },
+        { "type": "link", "label": "Compound interest calculator", "url": "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "investing", "title": "Investing Basics", "icon": "📈", "description": "Learn the basics and understand investment risk.", "children": [], "sections": [
+      { "type": "feeds", "title": "The Economy", "items": [
+        { "id": "investing-npr", "title": "NPR Economy", "url": "https://feeds.npr.org/1017/rss.xml" }
+      ] },
+      { "type": "links", "title": "Learn Before Investing", "items": [
+        { "type": "link", "label": "Investor.gov basics", "url": "https://www.investor.gov/introduction-investing" },
+        { "type": "link", "label": "Investor alerts", "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "taxes", "title": "Taxes", "icon": "📄", "description": "Tax filing information from the IRS.", "children": [], "sections": [
+      { "type": "links", "title": "Tax Resources", "items": [
+        { "type": "link", "label": "IRS filing guide", "url": "https://www.irs.gov/filing" },
+        { "type": "link", "label": "Free tax preparation help", "url": "https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers" }
+      ] }
+    ], "crosslinks": [] }
+  ],
+  "sections": [
+    { "type": "feeds", "title": "Your Money Headlines", "navLabel": "Headlines", "icon": "📰", "items": [
+      { "id": "nerdwallet-money", "title": "NerdWallet", "url": "https://www.nerdwallet.com/blog/feed/" },
+      { "id": "cnbc-money", "title": "CNBC Personal Finance", "url": "https://www.cnbc.com/id/21324812/device/rss/rss.html" },
+      { "id": "guardian-money", "title": "The Guardian Money", "url": "https://www.theguardian.com/us/money/rss" },
+      { "id": "npr-economy", "title": "NPR Economy", "url": "https://feeds.npr.org/1017/rss.xml" },
+      { "id": "cfpb-money", "title": "Consumer Financial Protection Bureau", "url": "https://www.consumerfinance.gov/about-us/newsroom/feed/" }
+    ] },
+    { "type": "links", "title": "Money Tools", "navLabel": "Tools", "icon": "🧮", "items": [
+      { "type": "link", "label": "Consumer money guides", "url": "https://www.consumerfinance.gov/consumer-tools/" },
+      { "type": "link", "label": "Compound interest calculator", "url": "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" },
+      { "type": "link", "label": "Credit report information", "url": "https://www.usa.gov/credit-reports" },
+      { "type": "link", "label": "IRS filing guide", "url": "https://www.irs.gov/filing" }
+    ] },
+    { "type": "links", "title": "Money Talk", "navLabel": "Chat", "icon": "💬", "items": [
+      { "type": "chat", "label": "Money Talk", "roomName": "Money Talk" }
+    ] }
+  ],
+  "crosslinks": [
+    { "channel": "workplace", "label": "WorkPlace", "icon": "💼" },
+    { "channel": "news", "label": "News", "icon": "📰" },
+    { "channel": "shopping", "label": "Shopping", "icon": "🛍️" }
+  ]
+}

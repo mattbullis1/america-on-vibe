@@ -1,0 +1,11 @@
+.codex-remote-attachments/
+.env
+config.local.php
+*.sqlite
+*.sqlite3
+*.db
+*.log
+vendor/
+.tools/
+dist/
+__pycache__/

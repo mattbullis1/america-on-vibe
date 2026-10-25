@@ -1,0 +1,48 @@
+{
+  "id": "music",
+  "title": "Music",
+  "icon": "🎵",
+  "logo": "assets/aov-logo.png",
+  "description": "Artists, albums, concerts, radio, and the songs we remember.",
+  "children": [
+    {
+      "id": "artists", "title": "Artists", "icon": "🎤", "description": "The people behind the music.", "children": [],
+      "sections": [{ "type": "feeds", "title": "Artists & Releases", "items": [
+        { "id": "artists-billboard", "title": "Billboard", "url": "https://www.billboard.com/feed/" },
+        { "id": "artists-pitchfork", "title": "Pitchfork", "url": "https://pitchfork.com/feed/feed-news/rss" }
+      ] }],
+      "crosslinks": [{ "channel": "entertainment", "label": "Entertainment" }]
+    },
+    {
+      "id": "radio", "title": "Radio", "icon": "📻", "description": "Tune in to live, independent radio stations.", "children": [],
+      "sections": [
+        { "type": "radio", "title": "Live Radio", "navLabel": "Stations", "icon": "📻", "items": [
+          { "id": "kexp", "label": "KEXP", "description": "Seattle music discovery and specialty shows", "streamUrl": "https://kexp.streamguys1.com/kexp160.aac", "siteUrl": "https://www.kexp.org/" },
+          { "id": "wfmu", "label": "WFMU", "description": "Independent freeform radio", "streamUrl": "https://stream0.wfmu.org/freeform-128k", "siteUrl": "https://www.wfmu.org/" }
+        ] },
+        { "type": "links", "title": "More to Hear", "items": [
+          { "type": "link", "label": "NPR Music", "url": "https://www.npr.org/music/" },
+          { "type": "link", "label": "KEXP program schedule", "url": "https://www.kexp.org/schedule/" },
+          { "type": "link", "label": "WFMU program schedule", "url": "https://www.wfmu.org/table" }
+        ] }
+      ],
+      "crosslinks": [{ "channel": "entertainment", "label": "Entertainment" }]
+    }
+  ],
+  "sections": [
+    { "type": "feeds", "title": "Music Scene", "navLabel": "Headlines", "icon": "📰", "items": [
+      { "id": "music-billboard", "title": "Billboard", "url": "https://www.billboard.com/feed/" },
+      { "id": "music-pitchfork", "title": "Pitchfork", "url": "https://pitchfork.com/feed/feed-news/rss" },
+      { "id": "music-guardian", "title": "The Guardian Music", "url": "https://www.theguardian.com/music/rss" }
+    ] },
+    { "type": "links", "title": "Explore Music", "navLabel": "Explore", "icon": "🎼", "items": [
+      { "type": "link", "label": "Billboard charts", "url": "https://www.billboard.com/charts/" },
+      { "type": "link", "label": "NPR Music", "url": "https://www.npr.org/music/" }
+    ] }
+  ],
+  "crosslinks": [
+    { "channel": "entertainment", "label": "Entertainment", "icon": "🎬" },
+    { "channel": "interests", "label": "Interests", "icon": "✨" },
+    { "channel": "games", "label": "Games", "icon": "🕹️" }
+  ]
+}

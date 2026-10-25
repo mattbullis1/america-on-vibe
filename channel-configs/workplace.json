@@ -1,0 +1,69 @@
+{
+  "id": "workplace",
+  "title": "WorkPlace",
+  "icon": "💼",
+  "logo": "assets/aov-logo.png",
+  "description": "Careers, job hunting, skills, working life, and small business.",
+  "children": [
+    { "id": "job-search", "title": "Job Search", "icon": "🔎", "description": "Find openings and prepare for the next opportunity.", "children": [], "sections": [
+      { "type": "links", "title": "Find a Job", "items": [
+        { "type": "link", "label": "CareerOneStop job search", "url": "https://www.careeronestop.org/JobSearch/FindJobs/find-jobs.aspx" },
+        { "type": "link", "label": "USAJOBS federal jobs", "url": "https://www.usajobs.gov/" },
+        { "type": "link", "label": "American Job Centers", "url": "https://www.careeronestop.org/LocalHelp/AmericanJobCenters/american-job-centers.aspx" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "careers-skills", "title": "Careers & Skills", "icon": "🎓", "description": "Explore occupations and build useful skills.", "children": [], "sections": [
+      { "type": "feeds", "title": "Career Stories", "items": [
+        { "id": "skills-guardian", "title": "The Guardian Careers", "url": "https://www.theguardian.com/careers/rss" },
+        { "id": "skills-fastcompany", "title": "Fast Company", "url": "https://www.fastcompany.com/latest/rss" }
+      ] },
+      { "type": "links", "title": "Career Guides", "items": [
+        { "type": "link", "label": "Occupational Outlook Handbook", "url": "https://www.bls.gov/ooh/" },
+        { "type": "link", "label": "CareerOneStop training finder", "url": "https://www.careeronestop.org/FindTraining/find-training.aspx" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "working-life", "title": "Working Life", "icon": "🏢", "description": "The people, policies, and changes shaping work.", "children": [], "sections": [
+      { "type": "feeds", "title": "Working Life", "items": [
+        { "id": "worklife-fastcompany", "title": "Fast Company", "url": "https://www.fastcompany.com/latest/rss" },
+        { "id": "worklife-cnbc", "title": "CNBC Business", "url": "https://www.cnbc.com/id/10001147/device/rss/rss.html" }
+      ] },
+      { "type": "links", "title": "At Work", "items": [
+        { "type": "link", "label": "Know your workplace rights", "url": "https://www.dol.gov/general/topic" },
+        { "type": "link", "label": "Workplace safety", "url": "https://www.osha.gov/workers" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "small-business", "title": "Small Business", "icon": "🏪", "description": "Ideas and practical help for starting or running a business.", "children": [], "sections": [
+      { "type": "feeds", "title": "Small Business Stories", "items": [
+        { "id": "business-inc", "title": "Inc.", "url": "https://www.inc.com/rss/" },
+        { "id": "business-entrepreneur", "title": "Entrepreneur", "url": "https://www.entrepreneur.com/rss-feed/latest" },
+        { "id": "business-guardian", "title": "The Guardian Small Business", "url": "https://www.theguardian.com/small-business-network/rss" }
+      ] },
+      { "type": "links", "title": "Start & Grow", "items": [
+        { "type": "link", "label": "SBA business guide", "url": "https://www.sba.gov/business-guide" },
+        { "type": "link", "label": "Find local SBA assistance", "url": "https://www.sba.gov/local-assistance" }
+      ] }
+    ], "crosslinks": [] }
+  ],
+  "sections": [
+    { "type": "feeds", "title": "WorkPlace Headlines", "navLabel": "Headlines", "icon": "📰", "items": [
+      { "id": "workplace-fastcompany", "title": "Fast Company", "url": "https://www.fastcompany.com/latest/rss" },
+      { "id": "workplace-guardian", "title": "The Guardian Careers", "url": "https://www.theguardian.com/careers/rss" },
+      { "id": "workplace-inc", "title": "Inc.", "url": "https://www.inc.com/rss/" },
+      { "id": "workplace-entrepreneur", "title": "Entrepreneur", "url": "https://www.entrepreneur.com/rss-feed/latest" },
+      { "id": "workplace-smallbusiness", "title": "The Guardian Small Business", "url": "https://www.theguardian.com/small-business-network/rss" }
+    ] },
+    { "type": "links", "title": "Career Desk", "navLabel": "Career Desk", "icon": "📋", "items": [
+      { "type": "link", "label": "Search jobs at CareerOneStop", "url": "https://www.careeronestop.org/JobSearch/FindJobs/find-jobs.aspx" },
+      { "type": "link", "label": "Explore careers at BLS", "url": "https://www.bls.gov/ooh/" },
+      { "type": "link", "label": "Start a business with SBA", "url": "https://www.sba.gov/business-guide" }
+    ] },
+    { "type": "links", "title": "WorkPlace Chat", "navLabel": "Chat", "icon": "💬", "items": [
+      { "type": "chat", "label": "Career Corner", "roomName": "Career Corner" }
+    ] }
+  ],
+  "crosslinks": [
+    { "channel": "personalfinance", "label": "Personal Finance", "icon": "💰" },
+    { "channel": "computing", "label": "Computing", "icon": "💻" },
+    { "channel": "researchandlearn", "label": "Research & Learn", "icon": "📚" }
+  ]
+}

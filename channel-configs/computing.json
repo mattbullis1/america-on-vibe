@@ -1,0 +1,67 @@
+{
+  "id": "computing",
+  "title": "Computing",
+  "icon": "💻",
+  "logo": "assets/aov-logo.png",
+  "description": "Computers, the web, digital know-how, and the machines we remember.",
+  "children": [
+    { "id": "tech-news", "title": "Tech News", "icon": "📰", "description": "What is changing in computers and online life.", "children": [], "sections": [
+      { "type": "feeds", "title": "Tech News", "items": [
+        { "id": "tech-ars", "title": "Ars Technica IT", "url": "https://arstechnica.com/information-technology/feed/" },
+        { "id": "tech-bleeping", "title": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/" },
+        { "id": "tech-verge", "title": "The Verge", "url": "https://www.theverge.com/rss/index.xml" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "help-how-to", "title": "Help & How-To", "icon": "🛠️", "description": "Practical guides for using and protecting your computer.", "children": [], "sections": [
+      { "type": "feeds", "title": "How-To Guides", "items": [
+        { "id": "help-howtogeek", "title": "How-To Geek", "url": "https://www.howtogeek.com/feed/" },
+        { "id": "help-makeuseof", "title": "MakeUseOf", "url": "https://www.makeuseof.com/feed/" }
+      ] },
+      { "type": "links", "title": "Trusted Help", "items": [
+        { "type": "link", "label": "CISA Secure Our World", "url": "https://www.cisa.gov/secure-our-world" },
+        { "type": "link", "label": "DigitalLearn computer basics", "url": "https://www.digitallearn.org/" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "retro-computing", "title": "Retro Computing", "icon": "💾", "description": "Classic hardware, software, and internet memories.", "children": [], "sections": [
+      { "type": "feeds", "title": "Retro Finds", "items": [
+        { "id": "retro-hackaday", "title": "Hackaday Retrocomputing", "url": "https://hackaday.com/tag/retrocomputing/feed/" }
+      ] },
+      { "type": "links", "title": "Explore the Past", "items": [
+        { "type": "link", "label": "Computer History Museum", "url": "https://computerhistory.org/" },
+        { "type": "link", "label": "Internet Archive software collection", "url": "https://archive.org/details/software" },
+        { "type": "chat", "label": "Retro Computing room", "roomName": "Retro Computing" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "makers-projects", "title": "Makers & Projects", "icon": "🔧", "description": "Tinker, build, and learn by doing.", "children": [], "sections": [
+      { "type": "feeds", "title": "Projects & Ideas", "items": [
+        { "id": "makers-pi", "title": "Raspberry Pi News", "url": "https://www.raspberrypi.com/news/feed/" }
+      ] },
+      { "type": "links", "title": "Start Making", "items": [
+        { "type": "link", "label": "Raspberry Pi projects", "url": "https://projects.raspberrypi.org/" },
+        { "type": "link", "label": "Arduino tutorials", "url": "https://docs.arduino.cc/tutorials/" }
+      ] }
+    ], "crosslinks": [] }
+  ],
+  "sections": [
+    { "type": "feeds", "title": "Computing Headlines", "navLabel": "Headlines", "icon": "📰", "items": [
+      { "id": "computing-ars", "title": "Ars Technica IT", "url": "https://arstechnica.com/information-technology/feed/" },
+      { "id": "computing-bleeping", "title": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/" },
+      { "id": "computing-howtogeek", "title": "How-To Geek", "url": "https://www.howtogeek.com/feed/" },
+      { "id": "computing-makeuseof", "title": "MakeUseOf", "url": "https://www.makeuseof.com/feed/" },
+      { "id": "computing-verge", "title": "The Verge", "url": "https://www.theverge.com/rss/index.xml" }
+    ] },
+    { "type": "links", "title": "Computer Help", "navLabel": "Help", "icon": "🛠️", "items": [
+      { "type": "link", "label": "Computer basics", "url": "https://www.digitallearn.org/" },
+      { "type": "link", "label": "Stay safer online", "url": "https://www.cisa.gov/secure-our-world" },
+      { "type": "link", "label": "Internet Archive software", "url": "https://archive.org/details/software" }
+    ] },
+    { "type": "links", "title": "Computing Chat", "navLabel": "Chat", "icon": "💬", "items": [
+      { "type": "chat", "label": "Retro Computing", "roomName": "Retro Computing" }
+    ] }
+  ],
+  "crosslinks": [
+    { "channel": "researchandlearn", "label": "Research & Learn", "icon": "📚" },
+    { "channel": "workplace", "label": "WorkPlace", "icon": "💼" },
+    { "channel": "games", "label": "Games", "icon": "🎮" }
+  ]
+}

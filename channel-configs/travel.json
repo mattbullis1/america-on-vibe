@@ -1,0 +1,115 @@
+{
+  "id": "travel",
+  "title": "Travel",
+  "icon": "✈️",
+  "logo": "assets/aov-logo.png",
+  "description": "Dream up a getaway, follow the open road, and swap travel stories.",
+  "children": [
+    { "id": "member-cruise", "title": "AOV Member Cruise", "icon": "🚢",
+      "description": "A playful travel daydream from the keyword directory. No cruise is scheduled or offered by AOV.",
+      "children": [], "sections": [
+        { "type": "text", "title": "All Aboard?", "paragraphs": [
+          "The AOV Member Cruise is a nostalgic joke destination. There are no tickets, bookings, or planned sailings.",
+          "For real travel inspiration, explore the Travel channel and check current details with the provider before making plans."
+        ] },
+        { "type": "links", "title": "Keep Exploring", "items": [
+          { "type": "channel", "label": "Travel stories", "channel": "travel" },
+          { "type": "channel", "label": "Road trips", "channel": "travel", "path": ["road-trips"] }
+        ] }
+      ], "crosslinks": [{ "channel": "travel", "label": "Travel", "icon": "✈️" }]
+    },
+    { "id": "destinations", "title": "Destinations", "icon": "🧭", "description": "Places to go and stories to inspire the next trip.", "children": [
+      { "id": "usa", "title": "USA", "icon": "🇺🇸", "description": "Explore places across the United States.", "children": [], "sections": [
+        { "type": "feeds", "title": "Around the USA", "items": [
+          { "id": "usa-guardian", "title": "The Guardian USA Travel", "url": "https://www.theguardian.com/travel/usa/rss" },
+          { "id": "usa-cnt", "title": "Condé Nast Traveler", "url": "https://www.cntraveler.com/feed/rss" }
+        ] }
+      ], "crosslinks": [] },
+      { "id": "europe", "title": "Europe", "icon": "🏰", "description": "European journeys and places to stay.", "children": [], "sections": [
+        { "type": "feeds", "title": "Europe Travel", "items": [
+          { "id": "europe-guardian", "title": "The Guardian Europe Travel", "url": "https://www.theguardian.com/travel/europe/rss" }
+        ] }
+      ], "crosslinks": [] }
+    ], "sections": [
+      { "type": "feeds", "title": "Destination Stories", "items": [
+        { "id": "dest-cnt", "title": "Condé Nast Traveler", "url": "https://www.cntraveler.com/feed/rss" },
+        { "id": "dest-guardian", "title": "The Guardian Travel", "url": "https://www.theguardian.com/us/travel/rss" }
+      ] }
+    ], "crosslinks": [] },
+    { "id": "road-trips", "title": "Road Trips", "icon": "🚗", "description": "Find scenic roads, national parks, and memorable stops along the way.", "children": [
+      { "id": "scenic-drives", "title": "Scenic Drives", "icon": "🛣️", "description": "Routes where the journey is the destination.", "children": [], "sections": [
+        { "type": "feeds", "title": "On the Road", "items": [
+          { "id": "scenic-guardian", "title": "The Guardian Road Trips", "url": "https://www.theguardian.com/travel/road-trips/rss" }
+        ] },
+        { "type": "links", "title": "Find a Scenic Route", "items": [
+          { "type": "link", "label": "America's Byways · official route directory", "url": "https://fhwaapps.fhwa.dot.gov/bywaysp" },
+          { "type": "link", "label": "Scenic drives in national parks", "url": "https://www.nps.gov/subjects/transportation/tripideas.htm" }
+        ] }
+      ], "crosslinks": [
+        { "channel": "travel", "path": ["road-trips", "national-parks"], "label": "National Parks", "icon": "🏞️" },
+        { "channel": "local", "label": "Local", "icon": "📍" }
+      ] },
+      { "id": "national-parks", "title": "National Parks", "icon": "🏞️", "description": "Plan a park visit and check updates before you drive.", "children": [], "sections": [
+        { "type": "feeds", "title": "Park Updates", "items": [
+          { "id": "parks-grca", "title": "Grand Canyon National Park", "url": "https://www.nps.gov/feeds/getNewsRSS.htm?id=grca" },
+          { "id": "parks-yell", "title": "Yellowstone National Park", "url": "https://www.nps.gov/feeds/getNewsRSS.htm?id=yell" }
+        ] },
+        { "type": "links", "title": "Plan a Park Visit", "items": [
+          { "type": "link", "label": "Find a national park", "url": "https://www.nps.gov/findapark/index.htm" },
+          { "type": "link", "label": "National Park Service trip ideas", "url": "https://www.nps.gov/subjects/transportation/tripideas.htm" },
+          { "type": "link", "label": "Camping and permits · Recreation.gov", "url": "https://www.recreation.gov/" }
+        ] }
+      ], "crosslinks": [
+        { "channel": "travel", "path": ["road-trips", "scenic-drives"], "label": "Scenic Drives", "icon": "🛣️" },
+        { "channel": "travel", "path": ["destinations", "usa"], "label": "USA Destinations", "icon": "🇺🇸" }
+      ] }
+    ], "sections": [
+      { "type": "feeds", "title": "Road Trip Stories", "items": [
+        { "id": "road-guardian", "title": "The Guardian Road Trips", "url": "https://www.theguardian.com/travel/road-trips/rss" }
+      ] },
+      { "type": "feeds", "title": "National Park Updates", "items": [
+        { "id": "road-grca", "title": "Grand Canyon National Park", "url": "https://www.nps.gov/feeds/getNewsRSS.htm?id=grca" },
+        { "id": "road-yell", "title": "Yellowstone National Park", "url": "https://www.nps.gov/feeds/getNewsRSS.htm?id=yell" }
+      ] },
+      { "type": "links", "title": "Plan a Drive", "items": [
+        { "type": "link", "label": "Find a scenic byway", "url": "https://fhwaapps.fhwa.dot.gov/bywaysp" },
+        { "type": "link", "label": "Find a national park", "url": "https://www.nps.gov/findapark/index.htm" },
+        { "type": "link", "label": "Camping and permits", "url": "https://www.recreation.gov/" }
+      ] },
+      { "type": "links", "title": "Road Trip Talk", "items": [
+        { "type": "chat", "label": "Travel Talk", "roomName": "Travel Talk" }
+      ] }
+    ], "crosslinks": [
+      { "channel": "local", "label": "Local", "icon": "📍" },
+      { "channel": "travel", "path": ["destinations", "usa"], "label": "USA Destinations", "icon": "🇺🇸" },
+      { "channel": "music", "path": ["radio"], "label": "Music Radio", "icon": "📻" },
+      { "channel": "families", "label": "Families", "icon": "👪" }
+    ] }
+  ],
+  "sections": [
+    { "type": "feeds", "title": "Travel Stories", "navLabel": "Stories", "icon": "📸", "items": [
+      { "id": "guardian-travel", "title": "The Guardian Travel", "url": "https://www.theguardian.com/us/travel/rss" },
+      { "id": "cnt-travel", "title": "Condé Nast Traveler", "url": "https://www.cntraveler.com/feed/rss" }
+    ] },
+    { "type": "feeds", "title": "Road Trip Desk", "navLabel": "Road Trips", "icon": "🚗", "items": [
+      { "id": "nps-canyon", "title": "Grand Canyon National Park", "url": "https://www.nps.gov/feeds/getNewsRSS.htm?id=grca" },
+      { "id": "nps-yellowstone", "title": "Yellowstone National Park", "url": "https://www.nps.gov/feeds/getNewsRSS.htm?id=yell" }
+    ] },
+    { "type": "links", "title": "Plan a Trip", "navLabel": "Plan a Trip", "icon": "🧳", "items": [
+      { "type": "link", "label": "Find a national park", "url": "https://www.nps.gov/findapark/index.htm" },
+      { "type": "link", "label": "U.S. passports", "url": "https://www.usa.gov/passport" },
+      { "type": "link", "label": "Current travel advisories", "url": "https://www.usa.gov/travel-advisory" }
+    ] },
+    { "type": "links", "title": "Travel Talk", "navLabel": "Chat", "icon": "💬", "items": [
+      { "type": "chat", "label": "Travel Talk", "roomName": "Travel Talk" }
+    ] },
+    { "type": "feeds", "title": "Traveler Posts", "navLabel": "Travelers", "icon": "👥", "items": [
+      { "id": "lemmy-travel", "title": "Lemmy Travel", "url": "https://lemmy.world/feeds/c/travel.xml?sort=Hot" }
+    ] }
+  ],
+  "crosslinks": [
+    { "channel": "local", "label": "Local", "icon": "📍" },
+    { "channel": "international", "label": "International", "icon": "🌍" },
+    { "channel": "lifestyles", "label": "Lifestyles", "icon": "🏡" }
+  ]
+}

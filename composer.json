@@ -1,0 +1,10 @@
+{
+    "require": {
+        "delight-im/auth": "^9.0",
+        "phpmailer/phpmailer": "^6.10"
+    },
+    "scripts": {
+        "post-install-cmd": ["@php scripts/patch-auth.php"],
+        "post-update-cmd": ["@php scripts/patch-auth.php"]
+    }
+}

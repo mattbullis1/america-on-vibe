@@ -3,13 +3,23 @@
   "title": "Games",
   "icon": "🕹️",
   "logo": "assets/aov-logo.png",
-  "description": "Discover free browser games from independent creators.",
-  "children": [
-    {"id":"new","title":"New Games","icon":"✨","description":"Recently added free games that play in a web browser.","children":[],"sections":[{"type":"game-cards","title":"New Browser Games","navLabel":"New Games","icon":"✨","items":[{"id":"games-new","title":"New on itch.io","url":"https://itch.io/games/newest/free/platform-web.xml"}]}],"crosslinks":[]}
-  ],
+  "description": "Play original browser games from the AOV community.",
+  "children": [],
   "sections": [
-    {"type":"game-cards","title":"Games to Explore","navLabel":"Discover","icon":"🎮","items":[{"id":"games-free","title":"Top Free Web Games","url":"https://itch.io/games/free/platform-web.xml"}]},
-    {"type":"links","title":"More Games","navLabel":"More Games","icon":"🧭","items":[{"type":"link","label":"Browse free web games on itch.io","url":"https://itch.io/games/free/platform-web"}]}
+    {"type":"game-cards","title":"AOV Games","navLabel":"Play Games","icon":"🎮","items":[
+      {"type":"game","title":"Planet Popper","icon":"🪐","url":"https://mattbullis1.github.io/Planet-Popper/"},
+      {"type":"game","title":"Buy Sell Market","icon":"📈","url":"https://mattbullis1.github.io/Buy-Sell-Market/"},
+      {"type":"game","title":"Evolution 2048","icon":"🧬","url":"https://mattbullis1.github.io/Evolution-2048/"},
+      {"type":"game","title":"Playing God V2","icon":"🌎","url":"https://mattbullis1.github.io/playing-god-v2/"},
+      {"type":"game","title":"Omnipotent","icon":"✨","url":"https://mattbullis1.github.io/omnipotent/"},
+      {"type":"game","title":"Oregon Trail 1847","icon":"🐎","url":"https://mattbullis1.github.io/oregon-trail-1847/"},
+      {"type":"game","title":"Atom Smasher","icon":"⚛️","url":"https://mattbullis1.github.io/atom-smasher/"},
+      {"type":"game","title":"GLM Angry Alien","icon":"👾","url":"https://mattbullis1.github.io/glm-angry-alien/"},
+      {"type":"game","title":"DeepSeek Angry Alien","icon":"👽","url":"https://mattbullis1.github.io/deepseek-angry-alien/"},
+      {"type":"game","title":"Moon Tower","icon":"🌙","url":"https://mattbullis1.github.io/moon-tower/"},
+      {"type":"game","title":"Moon Lander Explorer","icon":"🚀","url":"https://mattbullis1.github.io/moon-lander-explorer/"},
+      {"type":"game","title":"Power Surge Circuit","icon":"⚡","url":"https://mattbullis1.github.io/power-surge-circuit/"}
+    ]}
   ],
   "crosslinks": []
 }

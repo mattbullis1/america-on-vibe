@@ -1493,8 +1493,11 @@
   }
 
   async function loadGameCards(channel, feeds, container, request) {
+    const directGames = feeds.filter(game => game.type === 'game' && channelSafeUrl(game.url));
     const configured = feeds.filter(feed => /^[a-z][a-z0-9-]*$/.test(feed.id || ''));
-    const results = await Promise.allSettled(configured.map(feed => fetchChannelFeed(channel, feed.id)));
+    const results = directGames.length
+      ? [{ status: 'fulfilled', value: { items: directGames } }]
+      : await Promise.allSettled(configured.map(feed => fetchChannelFeed(channel, feed.id)));
     if (request !== channelRequest || !container.isConnected) return;
     const games = results.flatMap(result => result.status === 'fulfilled' ? result.value.items || [] : []);
     container.replaceChildren();
@@ -1505,7 +1508,7 @@
       seen.add(url);
       const card = document.createElement('article'); card.className = 'game-card';
       const launch = channelButton('', 'url', url, 'game-card-launch');
-      launch.setAttribute('aria-label', `View ${String(game.title || 'game')} on itch.io`);
+      launch.setAttribute('aria-label', `Play ${String(game.title || 'game')}`);
       launch.dataset.topic = String(game.title || 'Game');
       const imageUrl = channelSafeUrl(game.image);
       if (imageUrl) {
@@ -1515,10 +1518,10 @@
         image.addEventListener('error', () => image.replaceWith(document.createTextNode('🎮')), { once: true });
         launch.append(image);
       } else {
-        const fallback = document.createElement('span'); fallback.className = 'game-card-fallback'; fallback.textContent = '🎮'; launch.append(fallback);
+        const fallback = document.createElement('span'); fallback.className = 'game-card-fallback'; fallback.textContent = String(game.icon || '🎮'); launch.append(fallback);
       }
       const name = document.createElement('strong'); name.textContent = String(game.title || 'Game'); launch.append(name);
-      const action = document.createElement('span'); action.textContent = 'View game page ↗'; launch.append(action);
+      const action = document.createElement('span'); action.textContent = 'Play game ↗'; launch.append(action);
       card.append(launch); container.append(card);
     }
     if (!container.childElementCount) container.textContent = 'Games are temporarily unavailable. Try again later.';
